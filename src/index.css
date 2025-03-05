@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: black;
+  color: white;
+}
+
+@layer utilities {
+  .bg-gradient-dark {
+    background: linear-gradient(145deg, #0f172a, #1e293b);
+  }
+}
+
+@layer base {
+  :root {
+    --purple-gradient: linear-gradient(145deg, #7e22ce, #d946ef);
+  }
+}

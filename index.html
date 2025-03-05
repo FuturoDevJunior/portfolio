@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Portfolio and projects by DevFerreiraG - Full Stack Developer" />
+    <meta name="keywords" content="developer, programming, portfolio, react, typescript" />
+    <meta name="author" content="DevFerreiraG" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://your-domain.com/" />
+    <meta property="og:title" content="DevFerreiraG - Portfolio" />
+    <meta property="og:description" content="Portfolio and projects by DevFerreiraG - Full Stack Developer" />
+    <meta property="og:image" content="https://your-domain.com/preview.jpg" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://your-domain.com/" />
+    <meta property="twitter:title" content="DevFerreiraG - Portfolio" />
+    <meta property="twitter:description" content="Portfolio and projects by DevFerreiraG - Full Stack Developer" />
+    <meta property="twitter:image" content="https://your-domain.com/preview.jpg" />
+    
+    <title>DevFerreiraG</title>
+    <script>
+      const titles = ["D", "De", "Dev", "DevF", "DevFe", "DevFer", "DevFerr", "DevFerre", "DevFerrei", "DevFerreir", "DevFerreirа", "DevFerreiraG"];
+      let currentIndex = 0;
+      let intervalId;
+
+      function animateTitle() {
+        intervalId = setInterval(() => {
+          document.title = titles[currentIndex];
+          currentIndex = (currentIndex + 1) % titles.length;
+        }, 500);
+      }
+
+      // Start animation when page loads
+      window.onload = animateTitle;
+
+      // Change title when tab loses focus
+      window.onblur = () => {
+        clearInterval(intervalId);
+        document.title = "Volta aqui :(";
+      };
+
+      // Resume animation when tab regains focus
+      window.onfocus = () => {
+        document.title = "DevFerreiraG";
+        currentIndex = 0;
+        animateTitle();
+      };
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
