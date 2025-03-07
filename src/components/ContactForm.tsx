@@ -24,7 +24,7 @@ export function ContactForm() {
       // EmailJS integration
       await emailjs.send(
         'service_f4puwv2',  // Service ID
-        'template_073uaeu', // Template ID
+        'template_90idoa7', // Template ID
         formData,
         'g4cELeccnMKpDAAIF'  // Public Key
       );
