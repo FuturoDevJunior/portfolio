@@ -17,7 +17,7 @@
     "check-types": "tsc --noEmit",
     "format": "prettier --write \"src/**/*.ts\"",
     "prestart": "npm run build",
-    "start:prod": "NODE_ENV=production pm2 start dist/index.js --name devferreirag-api",
+    "start:prod": "NODE_ENV=production node dist/index.js",
     "setup": "npm install && npm run build && npm run postinstall"
   },
   "keywords": [

@@ -52,7 +52,13 @@ app.use(requestSanitizer);
 
 // CORS
 app.use(cors({
-    origin: process.env.CORS_ORIGINS?.split(',') || ['http://localhost:5173'],
+    origin: [
+        'https://www.devferreirag.com',
+        'https://www.devferreirag.com.br',
+        'https://devferreirag.com',
+        'https://devferreirag.com.br',
+        'http://localhost:5173'
+    ],
     methods: process.env.CORS_METHODS?.split(',') || ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: process.env.CORS_ALLOWED_HEADERS?.split(',') || ['Content-Type', 'Authorization', 'X-API-KEY', 'X-Analytics-ID', 'X-Marketing-Source'],
     credentials: true,
@@ -96,8 +102,14 @@ if (process.env.ENABLE_COMPRESSION?.toLowerCase() === 'true') {
 app.use(morgan(process.env.NODE_ENV === 'production' ? 'combined' : 'dev'));
 app.use(requestLogger);
 
-// Detecção de bots para ajuste de respostas
-app.use(botDetectionMiddleware);
+// Detecção de bots para ajuste de respostas (exceto para rotas específicas)
+app.use((req, res, next) => {
+    // Não aplicar a detecção de bots em rotas de monitoramento e recursos estáticos
+    if (req.path === '/health' || req.path.startsWith('/public/') || req.path.startsWith('/js/')) {
+        return next();
+    }
+    botDetectionMiddleware(req, res, next);
+});
 
 // Rate limiting
 const standardRateLimitOptions = {

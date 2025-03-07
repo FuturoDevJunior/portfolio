@@ -5,6 +5,12 @@ Allow: /
 Disallow: /admin/
 Disallow: /private/
 Disallow: /api/
+Disallow: /*?utm_
+Disallow: /*?source=
+Disallow: /*.json$
 
 # Sitemap location
-Sitemap: https://your-domain.com/sitemap.xml
+Sitemap: https://www.devferreirag.com/sitemap.xml
+
+# Host canônico
+Host: https://www.devferreirag.com
