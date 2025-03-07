@@ -1,0 +1,300 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "DevFerreiraG SEO & Analytics API",
+    "version": "1.0.0",
+    "description": "API para o portfólio de DevFerreiraG com recursos avançados de SEO, Analytics e Marketing",
+    "contact": {
+      "name": "DevFerreiraG",
+      "url": "https://devferreirag.com",
+      "email": "contact@devferreirag.com"
+    },
+    "license": {
+      "name": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://api.devferreirag.com",
+      "description": "Servidor de Produção"
+    },
+    {
+      "url": "https://staging-api.devferreirag.com",
+      "description": "Servidor de Staging"
+    },
+    {
+      "url": "http://localhost:3001",
+      "description": "Servidor Local de Desenvolvimento"
+    }
+  ],
+  "tags": [
+    {
+      "name": "SEO",
+      "description": "Endpoints para otimização para motores de busca"
+    },
+    {
+      "name": "Analytics",
+      "description": "Endpoints para coleta e análise de dados de uso"
+    },
+    {
+      "name": "Marketing",
+      "description": "Endpoints para rastreamento de campanhas e conversões"
+    },
+    {
+      "name": "API",
+      "description": "Endpoints de dados dinâmicos para o website"
+    },
+    {
+      "name": "Sitemap",
+      "description": "Endpoints para geração de sitemap e robots.txt"
+    }
+  ],
+  "externalDocs": {
+    "description": "Documentação Adicional",
+    "url": "https://devferreirag.com/docs"
+  },
+  "components": {
+    "securitySchemes": {
+      "apiKeyHeader": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "x-api-key",
+        "description": "Chave de API para acesso administrativo"
+      }
+    },
+    "schemas": {
+      "Error": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "type": "object",
+            "properties": {
+              "message": {
+                "type": "string"
+              },
+              "code": {
+                "type": "string"
+              },
+              "details": {
+                "type": "array",
+                "items": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "path": {
+            "type": "string"
+          }
+        }
+      },
+      "PageView": {
+        "type": "object",
+        "required": ["page", "sessionId"],
+        "properties": {
+          "page": {
+            "type": "string",
+            "description": "Caminho da página visualizada"
+          },
+          "title": {
+            "type": "string",
+            "description": "Título da página"
+          },
+          "sessionId": {
+            "type": "string",
+            "description": "ID da sessão do visitante"
+          },
+          "referrer": {
+            "type": "string",
+            "description": "URL de origem da visita"
+          },
+          "language": {
+            "type": "string",
+            "description": "Idioma do navegador"
+          },
+          "platform": {
+            "type": "string",
+            "description": "Plataforma do usuário (mobile, desktop)"
+          },
+          "userAgent": {
+            "type": "string",
+            "description": "User agent do navegador"
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Data e hora da visualização"
+          }
+        }
+      },
+      "Event": {
+        "type": "object",
+        "required": ["eventType", "sessionId", "page"],
+        "properties": {
+          "eventType": {
+            "type": "string",
+            "description": "Tipo de evento (click, scroll, etc)"
+          },
+          "sessionId": {
+            "type": "string",
+            "description": "ID da sessão do visitante"
+          },
+          "page": {
+            "type": "string",
+            "description": "Página onde o evento ocorreu"
+          },
+          "elementType": {
+            "type": "string",
+            "description": "Tipo do elemento HTML"
+          },
+          "elementId": {
+            "type": "string",
+            "description": "ID do elemento"
+          },
+          "elementText": {
+            "type": "string",
+            "description": "Texto do elemento"
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Data e hora do evento"
+          }
+        }
+      },
+      "UTMTracking": {
+        "type": "object",
+        "required": ["sessionId"],
+        "properties": {
+          "sessionId": {
+            "type": "string",
+            "description": "ID da sessão do visitante"
+          },
+          "source": {
+            "type": "string",
+            "description": "utm_source"
+          },
+          "medium": {
+            "type": "string",
+            "description": "utm_medium"
+          },
+          "campaign": {
+            "type": "string",
+            "description": "utm_campaign"
+          },
+          "content": {
+            "type": "string",
+            "description": "utm_content"
+          },
+          "term": {
+            "type": "string",
+            "description": "utm_term"
+          }
+        }
+      },
+      "Conversion": {
+        "type": "object",
+        "required": ["sessionId", "type"],
+        "properties": {
+          "sessionId": {
+            "type": "string",
+            "description": "ID da sessão do visitante"
+          },
+          "type": {
+            "type": "string",
+            "description": "Tipo de conversão"
+          },
+          "value": {
+            "type": "number",
+            "description": "Valor da conversão, se aplicável"
+          }
+        }
+      },
+      "Lead": {
+        "type": "object",
+        "required": ["email"],
+        "properties": {
+          "sessionId": {
+            "type": "string",
+            "description": "ID da sessão do visitante"
+          },
+          "email": {
+            "type": "string",
+            "format": "email",
+            "description": "Email do lead"
+          },
+          "name": {
+            "type": "string",
+            "description": "Nome do lead"
+          },
+          "source": {
+            "type": "string",
+            "description": "Fonte do lead"
+          }
+        }
+      },
+      "MetadataSEO": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "description": "Título da página"
+          },
+          "description": {
+            "type": "string",
+            "description": "Descrição da página"
+          },
+          "keywords": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Palavras-chave para SEO"
+          },
+          "robots": {
+            "type": "string",
+            "description": "Valor do meta tag robots"
+          },
+          "canonical": {
+            "type": "string",
+            "description": "URL canônica"
+          },
+          "ogType": {
+            "type": "string",
+            "description": "Tipo de conteúdo para Open Graph"
+          },
+          "imageUrl": {
+            "type": "string",
+            "description": "URL da imagem para compartilhamento"
+          },
+          "twitterCard": {
+            "type": "string",
+            "description": "Tipo de card para Twitter"
+          }
+        }
+      },
+      "SchemaMarkup": {
+        "type": "object",
+        "properties": {
+          "@context": {
+            "type": "string"
+          },
+          "@type": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "security": [
+    {
+      "apiKeyHeader": []
+    }
+  ],
+  "paths": {}
+}

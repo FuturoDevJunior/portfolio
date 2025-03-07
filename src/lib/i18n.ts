@@ -7,7 +7,13 @@ export const translations = {
       expertise: 'Expertise',
       cases: 'Cases',
       contact: 'Contato',
-      connect: 'Conectar'
+      connect: 'Conectar',
+      backToTop: 'Voltar ao topo',
+      connectLinkedIn: 'Conectar no LinkedIn',
+      mainNavigation: 'Navegação principal'
+    },
+    language: {
+      selectLanguage: 'Selecionar idioma'
     },
     hero: {
       title: 'Transformação Digital com Engenharia de Ponta',
@@ -22,6 +28,8 @@ export const translations = {
     },
     services: {
       title: 'Nossos Serviços',
+      subtitle: 'Soluções especializadas para suas necessidades tecnológicas',
+      skills: 'Habilidades',
       dataEngineering: {
         title: 'Engenharia de Dados',
         description: 'Arquitetura e implementação de pipelines de dados escaláveis, ETL/ELT, e data lakes com as melhores práticas do mercado.'
@@ -37,6 +45,8 @@ export const translations = {
     },
     expertise: {
       title: 'Áreas de Expertise',
+      subtitle: 'Conhecimento especializado em áreas estratégicas',
+      technologies: 'Tecnologias relacionadas',
       ai: {
         title: 'Inteligência Artificial',
         description: 'Desenvolvimento e implementação de soluções de IA e ML para otimização de processos e tomada de decisão.'
@@ -50,8 +60,15 @@ export const translations = {
         description: 'Implementação de práticas DevOps e SRE para automação e confiabilidade de sistemas.'
       }
     },
+    caseStudy: {
+      results: 'Resultados',
+      technologies: 'Tecnologias utilizadas',
+      metrics: 'Métricas de desempenho',
+      learnMore: 'Saiba mais sobre'
+    },
     cases: {
       title: 'Cases de Sucesso',
+      subtitle: 'Projetos que transformaram negócios',
       dataWarehouse: {
         title: 'Data Warehouse Enterprise',
         description: 'Implementação de data warehouse moderno para empresa do setor financeiro.',
@@ -76,9 +93,15 @@ export const translations = {
     },
     contact: {
       title: 'Entre em Contato',
+      subtitle: 'Vamos transformar sua ideia em realidade',
       info: {
         title: 'Informações de Contato'
       },
+      email: 'E-mail',
+      emailAriaLabel: 'Enviar e-mail para contact@devferreirag.com',
+      phone: 'Telefone',
+      phoneAriaLabel: 'Ligar para +55 11 91234-5678',
+      location: 'Localização',
       form: {
         name: 'Nome',
         namePlaceholder: 'Seu nome completo',
@@ -91,11 +114,23 @@ export const translations = {
         errorMessage: 'Ocorreu um erro ao enviar o formulário. Por favor, tente novamente.',
         successTitle: 'Mensagem Enviada!',
         successMessage: 'Obrigado pelo seu contato. Retornarei em breve!',
-        sendAnother: 'Enviar outra mensagem'
+        sendAnother: 'Enviar outra mensagem',
+        errors: {
+          nameRequired: 'Por favor, informe seu nome',
+          emailRequired: 'Por favor, informe seu e-mail',
+          emailInvalid: 'Por favor, informe um e-mail válido',
+          messageRequired: 'Por favor, escreva sua mensagem'
+        }
       }
     },
     footer: {
-      copyright: '© 2025 DevFerreiraG. Transformando ideias em soluções tecnológicas.'
+      copyright: '© 2025 DevFerreiraG. Transformando ideias em soluções tecnológicas.',
+      navigation: 'Links de navegação do rodapé',
+      rights: 'Todos os direitos reservados',
+      privacy: 'Política de Privacidade',
+      privacyPolicy: 'Ver política de privacidade',
+      terms: 'Termos de Uso',
+      termsOfService: 'Ver termos de uso'
     }
   },
   en: {
@@ -104,7 +139,13 @@ export const translations = {
       expertise: 'Expertise',
       cases: 'Cases',
       contact: 'Contact',
-      connect: 'Connect'
+      connect: 'Connect',
+      backToTop: 'Back to top',
+      connectLinkedIn: 'Connect on LinkedIn',
+      mainNavigation: 'Main navigation'
+    },
+    language: {
+      selectLanguage: 'Select language'
     },
     hero: {
       title: 'Digital Transformation with Cutting-Edge Engineering',
@@ -119,6 +160,8 @@ export const translations = {
     },
     services: {
       title: 'Our Services',
+      subtitle: 'Specialized solutions for your technological needs',
+      skills: 'Skills',
       dataEngineering: {
         title: 'Data Engineering',
         description: 'Architecture and implementation of scalable data pipelines, ETL/ELT, and data lakes using market best practices.'
@@ -134,6 +177,8 @@ export const translations = {
     },
     expertise: {
       title: 'Areas of Expertise',
+      subtitle: 'Specialized knowledge in strategic areas',
+      technologies: 'Related technologies',
       ai: {
         title: 'Artificial Intelligence',
         description: 'Development and implementation of AI and ML solutions for process optimization and decision making.'
@@ -147,8 +192,15 @@ export const translations = {
         description: 'Implementation of DevOps and SRE practices for system automation and reliability.'
       }
     },
+    caseStudy: {
+      results: 'Results',
+      technologies: 'Technologies used',
+      metrics: 'Performance metrics',
+      learnMore: 'Learn more about'
+    },
     cases: {
       title: 'Success Cases',
+      subtitle: 'Projects that transformed businesses',
       dataWarehouse: {
         title: 'Enterprise Data Warehouse',
         description: 'Implementation of modern data warehouse for financial sector company.',
@@ -173,9 +225,15 @@ export const translations = {
     },
     contact: {
       title: 'Get in Touch',
+      subtitle: 'Let\'s turn your idea into reality',
       info: {
         title: 'Contact Information'
       },
+      email: 'Email',
+      emailAriaLabel: 'Send email to contact@devferreirag.com',
+      phone: 'Phone',
+      phoneAriaLabel: 'Call +55 11 91234-5678',
+      location: 'Location',
       form: {
         name: 'Name',
         namePlaceholder: 'Your full name',
@@ -188,11 +246,23 @@ export const translations = {
         errorMessage: 'An error occurred while sending the form. Please try again.',
         successTitle: 'Message Sent!',
         successMessage: 'Thank you for your message. I will get back to you soon!',
-        sendAnother: 'Send another message'
+        sendAnother: 'Send another message',
+        errors: {
+          nameRequired: 'Please enter your name',
+          emailRequired: 'Please enter your email',
+          emailInvalid: 'Please enter a valid email',
+          messageRequired: 'Please enter your message'
+        }
       }
     },
     footer: {
-      copyright: '© 2025 DevFerreiraG. Transforming ideas into technological solutions.'
+      copyright: '© 2025 DevFerreiraG. Transforming ideas into technological solutions.',
+      navigation: 'Footer navigation links',
+      rights: 'All rights reserved',
+      privacy: 'Privacy Policy',
+      privacyPolicy: 'View privacy policy',
+      terms: 'Terms of Service',
+      termsOfService: 'View terms of service'
     }
   },
   es: {
@@ -201,7 +271,13 @@ export const translations = {
       expertise: 'Experiencia',
       cases: 'Casos',
       contact: 'Contacto',
-      connect: 'Conectar'
+      connect: 'Conectar',
+      backToTop: 'Volver arriba',
+      connectLinkedIn: 'Conectar en LinkedIn',
+      mainNavigation: 'Navegación principal'
+    },
+    language: {
+      selectLanguage: 'Seleccionar idioma'
     },
     hero: {
       title: 'Transformación Digital con Ingeniería de Vanguardia',
@@ -216,6 +292,8 @@ export const translations = {
     },
     services: {
       title: 'Nuestros Servicios',
+      subtitle: 'Soluciones especializadas para sus necesidades tecnológicas',
+      skills: 'Habilidades',
       dataEngineering: {
         title: 'Ingeniería de Datos',
         description: 'Arquitectura e implementación de pipelines de datos escalables, ETL/ELT y data lakes utilizando las mejores prácticas del mercado.'
@@ -231,6 +309,8 @@ export const translations = {
     },
     expertise: {
       title: 'Áreas de Experiencia',
+      subtitle: 'Conocimiento especializado en áreas estratégicas',
+      technologies: 'Tecnologías relacionadas',
       ai: {
         title: 'Inteligencia Artificial',
         description: 'Desarrollo e implementación de soluciones de IA y ML para optimización de procesos y toma de decisiones.'
@@ -244,52 +324,77 @@ export const translations = {
         description: 'Implementación de prácticas DevOps y SRE para automatización y confiabilidad de sistemas.'
       }
     },
+    caseStudy: {
+      results: 'Resultados',
+      technologies: 'Tecnologías utilizadas',
+      metrics: 'Métricas de rendimiento',
+      learnMore: 'Saber más sobre'
+    },
     cases: {
       title: 'Casos de Éxito',
+      subtitle: 'Proyectos que transformaron negocios',
       dataWarehouse: {
         title: 'Data Warehouse Empresarial',
         description: 'Implementación de data warehouse moderno para empresa del sector financiero.',
-        results: 'Reducción del 60% en tiempo de procesamiento y ahorro del 40% en costos de infraestructura.'
+        results: '60% de reducción en el tiempo de procesamiento y 40% de ahorro en costos de infraestructura.'
       },
       ecommerce: {
-        title: 'Plataforma E-commerce',
-        description: 'Desarrollo de plataforma e-commerce escalable con microservicios.',
-        results: 'Aumento del 45% en tasa de conversión y reducción del 30% en tiempo de carga.'
+        title: 'Plataforma de E-commerce',
+        description: 'Desarrollo de plataforma de e-commerce escalable con microservicios.',
+        results: '45% de aumento en la tasa de conversión y 30% de reducción en el tiempo de carga.'
       },
       metrics: {
         processing: 'Datos Procesados',
-        performance: 'Mejora Rendimiento',
-        conversion: 'Tasa Conversión'
+        performance: 'Mejora de Rendimiento',
+        conversion: 'Tasa de Conversión'
       }
     },
     stats: {
       projects: 'Proyectos Entregados',
       data: 'Datos Procesados',
       uptime: 'Uptime',
-      support: 'Soporte',
+      support: 'Soporte'
     },
     contact: {
-      title: 'Contáctanos',
+      title: 'Póngase en Contacto',
+      subtitle: 'Vamos a convertir su idea en realidad',
       info: {
-        title: 'Información de Contacto',
+        title: 'Información de Contacto'
       },
+      email: 'Correo',
+      emailAriaLabel: 'Enviar correo a contact@devferreirag.com',
+      phone: 'Teléfono',
+      phoneAriaLabel: 'Llamar a +55 11 91234-5678',
+      location: 'Ubicación',
       form: {
         name: 'Nombre',
-        namePlaceholder: 'Tu nombre completo',
+        namePlaceholder: 'Su nombre completo',
         email: 'Correo',
-        emailPlaceholder: 'tu@email.com',
+        emailPlaceholder: 'su@email.com',
         message: 'Mensaje',
-        messagePlaceholder: 'Describe tu proyecto o necesidades...',
+        messagePlaceholder: 'Describa su proyecto o necesidad...',
         submit: 'Enviar Mensaje',
         sending: 'Enviando...',
-        errorMessage: 'Ocurrió un error al enviar el formulario. Por favor, inténtalo de nuevo.',
+        errorMessage: 'Ocurrió un error al enviar el formulario. Por favor, inténtelo de nuevo.',
         successTitle: '¡Mensaje Enviado!',
-        successMessage: 'Gracias por tu mensaje. ¡Me pondré en contacto contigo pronto!',
-        sendAnother: 'Enviar otro mensaje'
+        successMessage: 'Gracias por su mensaje. Me pondré en contacto con usted pronto.',
+        sendAnother: 'Enviar otro mensaje',
+        errors: {
+          nameRequired: 'Por favor, ingrese su nombre',
+          emailRequired: 'Por favor, ingrese su correo',
+          emailInvalid: 'Por favor, ingrese un correo válido',
+          messageRequired: 'Por favor, escriba su mensaje'
+        }
       }
     },
     footer: {
-      copyright: '© 2025 DevFerreiraG. Transformando ideas en soluciones tecnológicas.'
+      copyright: '© 2025 DevFerreiraG. Transformando ideas en soluciones tecnológicas.',
+      navigation: 'Enlaces de navegación del pie de página',
+      rights: 'Todos los derechos reservados',
+      privacy: 'Política de Privacidad',
+      privacyPolicy: 'Ver política de privacidad',
+      terms: 'Términos de Uso',
+      termsOfService: 'Ver términos de uso'
     }
   }
 } as const;
