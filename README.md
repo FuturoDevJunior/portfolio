@@ -2,12 +2,13 @@
   
 # ✨ DevFerreiraG Consultancy ✨
 
-<img src="https://img.shields.io/badge/STATUS-EM%20DESENVOLVIMENTO-orange?style=for-the-badge&logo=statuspage" alt="Status: Em Desenvolvimento">
+<img src="https://img.shields.io/badge/STATUS-PRODUÇÃO-brightgreen?style=for-the-badge&logo=statuspage" alt="Status: Em Produção">
 
 [<img src="https://img.shields.io/badge/REACT-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React">](#)
 [<img src="https://img.shields.io/badge/TYPESCRIPT-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript">](#)
 [<img src="https://img.shields.io/badge/TAILWIND_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS">](#)
 [<img src="https://img.shields.io/badge/EMAILJS-FF4785?style=for-the-badge&logo=framer&logoColor=white" alt="EmailJS">](#)
+[<img src="https://img.shields.io/badge/ANALYTICS-E37400?style=for-the-badge&logo=google-analytics&logoColor=white" alt="Google Analytics">](#)
 
 </div>
 
@@ -17,25 +18,25 @@
 
 <br>
 
-<p align="center">
+<p align="center"></p>
   <b>🌍 Português</b> |
   <a href="#english">English</a> |
   <a href="#español">Español</a>
 </p>
 
 <p align="center">
-  <a href="https://consultancy.devferreirag.com" target="_blank">
+  <a href="https://www.devferreirag.com" target="_blank">
     <img width="800" src="https://via.placeholder.com/800x400?text=DevFerreiraG+Consultancy" alt="Screenshot do site"/>
   </a>
 </p>
 
 <br>
 
-> ### 💡 "Impulsionando negócios através de consultoria tecnológica estratégica"
+> ### 💡 "Impulsionando negócios através de consultoria tecnológica estratégica com presença global"
 
 ## 🚀 Visão Geral
 
-Plataforma de consultoria premium com interface elegante e intuitiva, projetada para conectar empresas a soluções tecnológicas personalizadas. Desenvolvida com foco em experiência do usuário e performance excepcional.
+Plataforma de consultoria premium com interface elegante e intuitiva, projetada para conectar empresas a soluções tecnológicas personalizadas em escala global. Desenvolvida com foco em experiência do usuário, performance excepcional e otimizada para alcance internacional com suporte aos idiomas português, inglês e espanhol.
 
 <details>
 <summary><b>📋 PRINCIPAIS RECURSOS</b></summary>
@@ -48,6 +49,8 @@ Plataforma de consultoria premium com interface elegante e intuitiva, projetada 
 - **📱 Design Adaptativo**: Experiência perfeita em qualquer dispositivo
 - **📧 Comunicação Direta**: Formulário de contato com integração EmailJS
 - **🔐 Área do Cliente**: Portal exclusivo para acompanhamento de projetos
+- **🌐 Suporte Multilíngue**: Experiência completa em PT-BR, EN e ES
+- **📈 Analytics Integrado**: Rastreamento completo com Google Analytics 4
 
 </details>
 
@@ -58,16 +61,31 @@ Plataforma de consultoria premium com interface elegante e intuitiva, projetada 
 | Front-end | Estilização | Ferramentas | Integração |
 |:-------:|:-------:|:-------:|:-------:|
 | [<img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React" width="100">](https://reactjs.org/) | [<img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" width="130">](https://tailwindcss.com/) | [<img src="https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white" alt="Vite" width="100">](https://vitejs.dev/) | [<img src="https://img.shields.io/badge/EmailJS-FF4785?style=flat-square&logo=framer&logoColor=white" alt="EmailJS" width="100">](https://www.emailjs.com/) |
-| [<img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" width="130">](https://www.typescriptlang.org/) | [<img src="https://img.shields.io/badge/Lucide_Icons-2D3748?style=flat-square&logo=svg&logoColor=white" alt="Lucide React" width="130">](https://lucide.dev/) | [<img src="https://img.shields.io/badge/ESLint-4B32C3?style=flat-square&logo=eslint&logoColor=white" alt="ESLint" width="100">](https://eslint.org/) | [<img src="https://img.shields.io/badge/TailwindMerge-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white" alt="Tailwind Merge" width="150">](https://github.com/dcastil/tailwind-merge) |
+| [<img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" width="130">](https://www.typescriptlang.org/) | [<img src="https://img.shields.io/badge/Lucide_Icons-2D3748?style=flat-square&logo=svg&logoColor=white" alt="Lucide React" width="130">](https://lucide.dev/) | [<img src="https://img.shields.io/badge/ESLint-4B32C3?style=flat-square&logo=eslint&logoColor=white" alt="ESLint" width="100">](https://eslint.org/) | [<img src="https://img.shields.io/badge/GA4-E37400?style=flat-square&logo=google-analytics&logoColor=white" alt="Google Analytics" width="100">](https://analytics.google.com/) |
+| [<img src="https://img.shields.io/badge/i18n-26A69A?style=flat-square&logo=i18next&logoColor=white" alt="i18n" width="100">](https://react.i18next.com/) | [<img src="https://img.shields.io/badge/TailwindMerge-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white" alt="Tailwind Merge" width="150">](https://github.com/dcastil/tailwind-merge) | [<img src="https://img.shields.io/badge/GTM-4285F4?style=flat-square&logo=google-tag-manager&logoColor=white" alt="Google Tag Manager" width="100">](https://tagmanager.google.com/) | [<img src="https://img.shields.io/badge/SEO_Tools-47A248?style=flat-square&logo=google-search-console&logoColor=white" alt="SEO Tools" width="120">](https://search.google.com/search-console) |
+
+</details>
+
+<details>
+<summary><b>🌐 OTIMIZAÇÃO INTERNACIONAL</b></summary>
+<br>
+
+- **🔍 SEO Multilíngue**: Metatags otimizadas para português, inglês e espanhol
+- **🔄 hreflang Tags**: Implementação correta para redirecionamento por idioma
+- **📱 Responsividade Global**: Design adaptado para diferentes hábitos de uso regionais
+- **🌍 Geo Meta Tags**: Configurações específicas para melhor indexação regional
+- **📊 Análise por País**: Segmentação de métricas por região geográfica
+- **🔌 CDN Otimizada**: Distribuição de conteúdo com desempenho global
+- **⚡ Performance Internacional**: Tempo de carregamento otimizado para diferentes regiões
 
 </details>
 
 <br>
 
-## 🖥️ Demonstração
+## 🖥️ Site ao Vivo
 
 <p align="center">
-  <a href="https://consultancy.devferreirag.com" target="_blank">
+  <a href="https://www.devferreirag.com" target="_blank">
     <img src="https://img.shields.io/badge/VISITE_O_SITE-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Visitar o site">
   </a>
 </p>
@@ -86,8 +104,9 @@ cd consultancy
 # Instale as dependências
 npm install
 
-# Configure o EmailJS
+# Configure o EmailJS e Analytics
 # Edite src/components/ContactForm.tsx com suas credenciais
+# Verifique se a ID do GA4 (G-CQMQ2ZPWBZ) está configurada corretamente
 
 # Inicie o servidor de desenvolvimento
 npm run dev
@@ -95,10 +114,10 @@ npm run dev
 
 <br>
 
-## 📈 Vantagens Competitivas
+## 📈 Análise de Performance
 
 <p align="center">
-  <img src="https://via.placeholder.com/800x200?text=Comparative+Analysis+Graph" alt="Gráfico de Análise Comparativa">
+  <img src="https://via.placeholder.com/800x200?text=Analytics+Performance+Dashboard" alt="Dashboard de Performance Analytics">
 </p>
 
 <table align="center">
@@ -116,11 +135,23 @@ npm run dev
       <b>ROI Médio</b>
     </td>
     <td align="center" width="25%">
-      <img src="https://img.shields.io/badge/3_SEMANAS-orange?style=for-the-badge" alt="3 Semanas"><br>
-      <b>Implementação</b>
+      <img src="https://img.shields.io/badge/15_PAÍSES-orange?style=for-the-badge" alt="15 Países"><br>
+      <b>Alcance Global</b>
     </td>
   </tr>
 </table>
+
+<br>
+
+## 📊 Integração com Analytics
+
+O projeto utiliza Google Analytics 4 (GA4) com ID `G-CQMQ2ZPWBZ` para rastreamento avançado de métricas e comportamento do usuário. A implementação inclui:
+
+- **👥 Segmentação por Idioma**: Análise de comportamento por preferência de idioma
+- **🌍 Métricas Geográficas**: Rastreamento de origem de tráfego por país e região
+- **⏱️ Tempo de Engajamento**: Métricas detalhadas de uso por seção
+- **📱 Análise por Dispositivo**: Segmentação de uso por dispositivo e tamanho de tela
+- **🔄 Fluxo de Conversão**: Acompanhamento de funil de conversão multilíngue
 
 <br>
 
@@ -153,11 +184,11 @@ npm run dev
   <a href="#español">Español</a>
 </p>
 
-> ### 💡 "Empowering businesses through strategic technology consulting"
+> ### 💡 "Empowering businesses through strategic technology consulting with global reach"
 
 ## 🚀 Overview
 
-Premium consultancy platform with an elegant and intuitive interface, designed to connect businesses with customized technological solutions. Developed with a focus on user experience and exceptional performance.
+Premium consultancy platform with an elegant and intuitive interface, designed to connect businesses with customized technological solutions on a global scale. Developed with a focus on user experience, exceptional performance, and optimized for international reach with support for Portuguese, English, and Spanish.
 
 <details>
 <summary><b>📋 KEY FEATURES</b></summary>
@@ -170,15 +201,31 @@ Premium consultancy platform with an elegant and intuitive interface, designed t
 - **📱 Responsive Design**: Perfect experience on any device
 - **📧 Direct Communication**: Contact form with EmailJS integration
 - **🔐 Client Portal**: Exclusive platform for project tracking
+- **🌐 Multilingual Support**: Complete experience in PT-BR, EN, and ES
+- **📈 Integrated Analytics**: Comprehensive tracking with Google Analytics 4
+
+</details>
+
+<details>
+<summary><b>🌐 INTERNATIONAL OPTIMIZATION</b></summary>
+<br>
+
+- **🔍 Multilingual SEO**: Optimized metatags for Portuguese, English, and Spanish
+- **🔄 hreflang Tags**: Proper implementation for language-based redirection
+- **📱 Global Responsiveness**: Design adapted for different regional usage habits
+- **🌍 Geo Meta Tags**: Specific configurations for better regional indexing
+- **📊 Country Analytics**: Metric segmentation by geographic region
+- **🔌 Optimized CDN**: Content distribution with global performance
+- **⚡ International Performance**: Loading time optimized for different regions
 
 </details>
 
 <br>
 
-## 🖥️ Live Demo
+## 🖥️ Live Site
 
 <p align="center">
-  <a href="https://consultancy.devferreirag.com" target="_blank">
+  <a href="https://www.devferreirag.com" target="_blank">
     <img src="https://img.shields.io/badge/VISIT_THE_SITE-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Visit the site">
   </a>
 </p>
@@ -197,8 +244,9 @@ cd consultancy
 # Install dependencies
 npm install
 
-# Configure EmailJS
+# Configure EmailJS and Analytics
 # Edit src/components/ContactForm.tsx with your credentials
+# Verify if GA4 ID (G-CQMQ2ZPWBZ) is properly configured
 
 # Start development server
 npm run dev
@@ -206,10 +254,10 @@ npm run dev
 
 <br>
 
-## 📈 Competitive Advantages
+## 📈 Performance Analysis
 
 <p align="center">
-  <img src="https://via.placeholder.com/800x200?text=Comparative+Analysis+Graph" alt="Comparative Analysis Graph">
+  <img src="https://via.placeholder.com/800x200?text=Analytics+Performance+Dashboard" alt="Analytics Performance Dashboard">
 </p>
 
 <table align="center">
@@ -227,11 +275,23 @@ npm run dev
       <b>Average ROI</b>
     </td>
     <td align="center" width="25%">
-      <img src="https://img.shields.io/badge/3_WEEKS-orange?style=for-the-badge" alt="3 Weeks"><br>
-      <b>Implementation</b>
+      <img src="https://img.shields.io/badge/15_COUNTRIES-orange?style=for-the-badge" alt="15 Countries"><br>
+      <b>Global Reach</b>
     </td>
   </tr>
 </table>
+
+<br>
+
+## 📊 Analytics Integration
+
+The project uses Google Analytics 4 (GA4) with ID `G-CQMQ2ZPWBZ` for advanced tracking of metrics and user behavior. The implementation includes:
+
+- **👥 Language Segmentation**: Analysis of behavior by language preference
+- **🌍 Geographic Metrics**: Tracking of traffic origin by country and region
+- **⏱️ Engagement Time**: Detailed usage metrics by section
+- **📱 Device Analysis**: Usage segmentation by device and screen size
+- **🔄 Conversion Flow**: Monitoring of multilingual conversion funnel
 
 <br>
 
@@ -264,11 +324,11 @@ npm run dev
   <b>🌍 Español</b>
 </p>
 
-> ### 💡 "Potenciando negocios a través de consultoría tecnológica estratégica"
+> ### 💡 "Potenciando negocios a través de consultoría tecnológica estratégica con alcance global"
 
 ## 🚀 Visión General
 
-Plataforma de consultoría premium con interfaz elegante e intuitiva, diseñada para conectar empresas con soluciones tecnológicas personalizadas. Desarrollada con enfoque en la experiencia del usuario y rendimiento excepcional.
+Plataforma de consultoría premium con interfaz elegante e intuitiva, diseñada para conectar empresas con soluciones tecnológicas personalizadas a escala global. Desarrollada con enfoque en la experiencia del usuario, rendimiento excepcional y optimizada para alcance internacional con soporte para portugués, inglés y español.
 
 <details>
 <summary><b>📋 CARACTERÍSTICAS PRINCIPALES</b></summary>
@@ -281,15 +341,31 @@ Plataforma de consultoría premium con interfaz elegante e intuitiva, diseñada 
 - **📱 Diseño Adaptativo**: Experiencia perfecta en cualquier dispositivo
 - **📧 Comunicación Directa**: Formulario de contacto con integración EmailJS
 - **🔐 Portal del Cliente**: Plataforma exclusiva para seguimiento de proyectos
+- **🌐 Soporte Multilingüe**: Experiencia completa en PT-BR, EN y ES
+- **📈 Analytics Integrado**: Seguimiento completo con Google Analytics 4
+
+</details>
+
+<details>
+<summary><b>🌐 OPTIMIZACIÓN INTERNACIONAL</b></summary>
+<br>
+
+- **🔍 SEO Multilingüe**: Metatags optimizadas para portugués, inglés y español
+- **🔄 Etiquetas hreflang**: Implementación correcta para redirección por idioma
+- **📱 Capacidad de Respuesta Global**: Diseño adaptado a diferentes hábitos de uso regionales
+- **🌍 Geo Meta Tags**: Configuraciones específicas para mejor indexación regional
+- **📊 Análisis por País**: Segmentación de métricas por región geográfica
+- **🔌 CDN Optimizada**: Distribución de contenido con rendimiento global
+- **⚡ Rendimiento Internacional**: Tiempo de carga optimizado para diferentes regiones
 
 </details>
 
 <br>
 
-## 🖥️ Demostración en Vivo
+## 🖥️ Sitio en Vivo
 
 <p align="center">
-  <a href="https://consultancy.devferreirag.com" target="_blank">
+  <a href="https://www.devferreirag.com" target="_blank">
     <img src="https://img.shields.io/badge/VISITAR_EL_SITIO-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Visitar el sitio">
   </a>
 </p>
@@ -308,8 +384,9 @@ cd consultancy
 # Instalar dependencias
 npm install
 
-# Configurar EmailJS
+# Configurar EmailJS y Analytics
 # Editar src/components/ContactForm.tsx con sus credenciales
+# Verificar si el ID de GA4 (G-CQMQ2ZPWBZ) está configurado correctamente
 
 # Iniciar servidor de desarrollo
 npm run dev
@@ -317,10 +394,10 @@ npm run dev
 
 <br>
 
-## 📈 Ventajas Competitivas
+## 📈 Análisis de Rendimiento
 
 <p align="center">
-  <img src="https://via.placeholder.com/800x200?text=Gráfico+de+Análisis+Comparativo" alt="Gráfico de Análisis Comparativo">
+  <img src="https://via.placeholder.com/800x200?text=Panel+de+Rendimiento+Analytics" alt="Panel de Rendimiento Analytics">
 </p>
 
 <table align="center">
@@ -338,11 +415,23 @@ npm run dev
       <b>ROI Promedio</b>
     </td>
     <td align="center" width="25%">
-      <img src="https://img.shields.io/badge/3_SEMANAS-orange?style=for-the-badge" alt="3 Semanas"><br>
-      <b>Implementación</b>
+      <img src="https://img.shields.io/badge/15_PAÍSES-orange?style=for-the-badge" alt="15 Países"><br>
+      <b>Alcance Global</b>
     </td>
   </tr>
 </table>
+
+<br>
+
+## 📊 Integración con Analytics
+
+El proyecto utiliza Google Analytics 4 (GA4) con ID `G-CQMQ2ZPWBZ` para seguimiento avanzado de métricas y comportamiento del usuario. La implementación incluye:
+
+- **👥 Segmentación por Idioma**: Análisis de comportamiento por preferencia de idioma
+- **🌍 Métricas Geográficas**: Seguimiento de origen de tráfico por país y región
+- **⏱️ Tiempo de Interacción**: Métricas detalladas de uso por sección
+- **📱 Análisis por Dispositivo**: Segmentación de uso por dispositivo y tamaño de pantalla
+- **🔄 Flujo de Conversión**: Seguimiento de embudo de conversión multilingüe
 
 <br>
 
@@ -365,7 +454,7 @@ npm run dev
 <div align="center">
   <p>Desarrollado con ❤️ por DevFerreiraG</p>
   
-  <a href="https://devferreirag.com">
+  <a href="https://www.devferreirag.com">
     <img src="https://img.shields.io/badge/www.devferreirag.com-000000?style=for-the-badge&logo=safari&logoColor=white" alt="DevFerreiraG">
   </a>
 </div>

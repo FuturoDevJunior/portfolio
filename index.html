@@ -1,37 +1,88 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Portfolio and projects by DevFerreiraG - Full Stack Developer" />
-    <meta name="keywords" content="developer, programming, portfolio, react, typescript" />
-    <meta name="author" content="DevFerreiraG" />
     
-    <!-- Google tag (gtag.js) -->
+    <!-- Google Tag Manager -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      dataLayer.push({
+        'event': 'gtm.init_consent',
+        'gtm.uniqueEventId': 1
+      });
+      dataLayer.push({
+        'event': 'gtm.load',
+        'gtm': {
+          'uniqueEventId': 11,
+          'start': new Date().getTime(),
+          'priorityId': undefined
+        }
+      });
+      (function(w,d,s,l,i){
+        w[l]=w[l]||[];
+        w[l].push({'gtm.start': new Date().getTime(), 'event':'gtm.js'});
+        var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),
+            dl=l!='dataLayer'?'&l='+l:'';
+        j.async=true;
+        j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+        f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-XXXXXXX');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-CQMQ2ZPWBZ"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-CQMQ2ZPWBZ');
     </script>
     
+    <!-- Multilingual SEO Meta Tags -->
+    <meta name="description" content="Portfolio e projetos de DevFerreiraG - Desenvolvedor Full Stack | Portfolio and projects by DevFerreiraG - Full Stack Developer | Portafolio y proyectos de DevFerreiraG - Desarrollador Full Stack" />
+    <meta name="keywords" content="desenvolvedor, programação, portfolio, react, typescript, developer, programming, desarrollo, programación" />
+    <meta name="author" content="DevFerreiraG" />
+    
+    <!-- Alternate Language Links -->
+    <link rel="alternate" href="https://www.devferreirag.com" hreflang="pt-br" />
+    <link rel="alternate" href="https://www.devferreirag.com/en" hreflang="en" />
+    <link rel="alternate" href="https://www.devferreirag.com/es" hreflang="es" />
+    <link rel="alternate" href="https://www.devferreirag.com" hreflang="x-default" />
+    
+    <!-- Language Meta -->
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:locale:alternate" content="es_ES" />
+    
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://your-domain.com/" />
-    <meta property="og:title" content="DevFerreiraG - Portfolio" />
-    <meta property="og:description" content="Portfolio and projects by DevFerreiraG - Full Stack Developer" />
-    <meta property="og:image" content="https://your-domain.com/preview.jpg" />
-
+    <meta property="og:url" content="https://www.devferreirag.com/" />
+    <meta property="og:title" content="DevFerreiraG - Portfolio | Full Stack Developer" />
+    <meta property="og:description" content="Portfolio e projetos de DevFerreiraG - Desenvolvedor Full Stack" />
+    <meta property="og:image" content="https://www.devferreirag.com/preview.jpg" />
+    <meta property="og:site_name" content="DevFerreiraG" />
+    
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://your-domain.com/" />
-    <meta property="twitter:title" content="DevFerreiraG - Portfolio" />
-    <meta property="twitter:description" content="Portfolio and projects by DevFerreiraG - Full Stack Developer" />
-    <meta property="twitter:image" content="https://your-domain.com/preview.jpg" />
+    <meta property="twitter:url" content="https://www.devferreirag.com/" />
+    <meta property="twitter:title" content="DevFerreiraG - Portfolio | Full Stack Developer" />
+    <meta property="twitter:description" content="Portfolio e projetos de DevFerreiraG - Desenvolvedor Full Stack" />
+    <meta property="twitter:image" content="https://www.devferreirag.com/preview.jpg" />
+    
+    <!-- Geo Meta Tags -->
+    <meta name="geo.region" content="BR" />
+    <meta name="geo.position" content="-23.5505;-46.6333" />
+    <meta name="ICBM" content="-23.5505, -46.6333" />
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="rating" content="general" />
+    <meta name="revisit-after" content="7 days" />
     
     <title>DevFerreiraG</title>
     <script>
@@ -64,6 +115,11 @@
     </script>
   </head>
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
