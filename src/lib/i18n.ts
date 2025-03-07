@@ -86,7 +86,12 @@ export const translations = {
         emailPlaceholder: 'seu@email.com',
         message: 'Mensagem',
         messagePlaceholder: 'Descreva seu projeto ou necessidade...',
-        submit: 'Enviar Mensagem'
+        submit: 'Enviar Mensagem',
+        sending: 'Enviando...',
+        errorMessage: 'Ocorreu um erro ao enviar o formulário. Por favor, tente novamente.',
+        successTitle: 'Mensagem Enviada!',
+        successMessage: 'Obrigado pelo seu contato. Retornarei em breve!',
+        sendAnother: 'Enviar outra mensagem'
       }
     },
     footer: {
@@ -178,7 +183,12 @@ export const translations = {
         emailPlaceholder: 'your@email.com',
         message: 'Message',
         messagePlaceholder: 'Describe your project or needs...',
-        submit: 'Send Message'
+        submit: 'Send Message',
+        sending: 'Sending...',
+        errorMessage: 'An error occurred while sending the form. Please try again.',
+        successTitle: 'Message Sent!',
+        successMessage: 'Thank you for your message. I will get back to you soon!',
+        sendAnother: 'Send another message'
       }
     },
     footer: {
@@ -270,7 +280,12 @@ export const translations = {
         emailPlaceholder: 'tu@email.com',
         message: 'Mensaje',
         messagePlaceholder: 'Describe tu proyecto o necesidades...',
-        submit: 'Enviar Mensaje'
+        submit: 'Enviar Mensaje',
+        sending: 'Enviando...',
+        errorMessage: 'Ocurrió un error al enviar el formulario. Por favor, inténtalo de nuevo.',
+        successTitle: '¡Mensaje Enviado!',
+        successMessage: 'Gracias por tu mensaje. ¡Me pondré en contacto contigo pronto!',
+        sendAnother: 'Enviar otro mensaje'
       }
     },
     footer: {
