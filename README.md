@@ -1,799 +1,438 @@
+# DevFerreiraG Consultancy
+
 <div align="center">
+
+  ![DevFerreiraG](https://i.imgur.com/sQSZYHS.png)
   
-# ✨ DevFerreiraG Consultancy ✨
+  <h1>Transformação Digital para Empresas Globais</h1>
+  
+  [![Lighthouse Score](https://img.shields.io/badge/Lighthouse-98%25-success?style=for-the-badge&logo=lighthouse&logoColor=white)](https://www.devferreirag.com) 
+  [![Vercel](https://img.shields.io/badge/Vercel-Deployed-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://www.devferreirag.com)
+  [![WCAG 2.1 AA](https://img.shields.io/badge/WCAG_2.1-AA-blue?style=for-the-badge)](https://www.devferreirag.com)
 
-<img src="https://img.shields.io/badge/STATUS-PRODUÇÃO-brightgreen?style=for-the-badge&logo=statuspage" alt="Status: Em Produção">
+  <h2><a href="https://www.devferreirag.com" target="_blank">www.devferreirag.com</a></h2>
 
-[<img src="https://img.shields.io/badge/REACT-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React">](#)
-[<img src="https://img.shields.io/badge/TYPESCRIPT-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript">](#)
-[<img src="https://img.shields.io/badge/TAILWIND_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS">](#)
-[<img src="https://img.shields.io/badge/VITE-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite">](#)
-[<img src="https://img.shields.io/badge/NEXT.JS-000000?style=for-the-badge&logo=next.js&logoColor=white" alt="Next.js">](#)
-[<img src="https://img.shields.io/badge/EMAILJS-FF4785?style=for-the-badge&logo=framer&logoColor=white" alt="EmailJS">](#)
-[<img src="https://img.shields.io/badge/ANALYTICS-E37400?style=for-the-badge&logo=google-analytics&logoColor=white" alt="Google Analytics">](#)
-
-[![CI/CD Status](https://img.shields.io/badge/CI%2FCD-Passing-success?style=for-the-badge&logo=github-actions)](https://github.com/DevFerreiraG)
-[![Lighthouse Score](https://img.shields.io/badge/Lighthouse-98%25-success?style=for-the-badge&logo=lighthouse)](https://pagespeed.web.dev/)
-[![Website Uptime](https://img.shields.io/badge/Uptime-99.98%25-success?style=for-the-badge&logo=statuspage)](https://www.devferreirag.com)
-
+  <hr/>
+  
+  <p>
+    <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React Badge" />
+    <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript Badge" />
+    <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind Badge" />
+    <img src="https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E" alt="Vite Badge" />
+    <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js Badge" />
+    <img src="https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white" alt="Express Badge" />
+    <img src="https://img.shields.io/badge/EmailJS-FF9A00?style=for-the-badge" alt="EmailJS Badge" />
+    <img src="https://img.shields.io/badge/Google%20Analytics-E37400?style=for-the-badge&logo=google%20analytics&logoColor=white" alt="Google Analytics Badge" />
+  </p>
+  
+  <p>
+    <a href="#pt"><img src="https://img.shields.io/badge/🇧🇷_Português-primary?style=flat-square" /></a> |
+    <a href="#en"><img src="https://img.shields.io/badge/🇺🇸_English-informational?style=flat-square" /></a> |
+    <a href="#es"><img src="https://img.shields.io/badge/🇪🇸_Español-success?style=flat-square" /></a>
+  </p>
 </div>
 
-<div align="center">
-  <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" alt="linha colorida">
-</div>
+<hr/>
 
-<br>
+<a name="pt"></a>
 
-<p align="center">
-  <b>🌍 Português</b> |
-  <a href="#english">English</a> |
-  <a href="#español">Español</a>
-</p>
+## 🔍 Visão Geral
 
-<p align="center">
-  <a href="https://www.devferreirag.com" target="_blank">
-    <img width="800" src="https://via.placeholder.com/800x400?text=DevFerreiraG+Consultancy" alt="Screenshot do site"/>
-  </a>
-</p>
+Plataforma completa de consultoria digital desenvolvida com arquitetura moderna e escalável, composta por frontend React e backend Node.js. O sistema integra avançadas funcionalidades de SEO, analytics e rastreamento de performance de marketing, oferecendo uma solução completa para presença digital corporativa com suporte multilíngue.
 
-<br>
+### ⭐ Métricas de Excelência
 
-> ### 💡 "Impulsionando negócios através de consultoria tecnológica estratégica com presença global"
+| **Métrica** | **Resultado** | **Métrica** | **Resultado** |
+|-------------|---------------|-------------|---------------|
+| **Performance** | ![98/100](https://img.shields.io/badge/98/100-success?style=flat-square) | **Tempo de Carregamento** | ![<1.5s](https://img.shields.io/badge/<1.5s-success?style=flat-square) |
+| **SEO** | ![100/100](https://img.shields.io/badge/100/100-success?style=flat-square) | **PageSpeed** | ![Grade A](https://img.shields.io/badge/Grade_A-success?style=flat-square) | 
+| **Acessibilidade** | ![97/100](https://img.shields.io/badge/97/100-success?style=flat-square) | **Core Web Vitals** | ![Aprovado](https://img.shields.io/badge/Aprovado-success?style=flat-square) |
 
-## 🚀 Visão Geral
+## 🛠️ Stack Tecnológica
 
-Plataforma de consultoria premium com interface elegante e intuitiva, projetada para conectar empresas a soluções tecnológicas personalizadas em escala global. Desenvolvida com foco em experiência do usuário, performance excepcional e otimizada para alcance internacional com suporte aos idiomas português, inglês e espanhol.
+<table>
+<tr>
+<td width="50%" valign="top">
 
-<details open>
-<summary><b>📊 RESULTADOS COMPROVADOS</b></summary>
-<br>
+### Frontend
+- ⚛️ **React 18.3** - Arquitetura de componentes com Hooks avançados e Context API
+- 🔷 **TypeScript 5.5** - Tipagem forte com interfaces, generics e type guards
+- 🎨 **Tailwind CSS 3.4** - Sistema de design responsivo com classes utilitárias
+- ⚡ **Vite 5.4** - Build system otimizado com HMR e tree-shaking
+- 📱 **Mobile-first** - Experiência otimizada para todos os dispositivos
+- 🌙 **Tema adaptativo** - Sistema dark/light baseado em preferências
 
-<table align="center">
-  <tr>
-    <td align="center" width="20%">
-      <img src="https://img.shields.io/badge/99.2%25-success?style=for-the-badge" alt="99.2%"><br>
-      <b>Satisfação dos Clientes</b>
-      <p><small>+1,500 avaliações coletadas</small></p>
-    </td>
-    <td align="center" width="20%">
-      <img src="https://img.shields.io/badge/+67%25-blue?style=for-the-badge" alt="+67%"><br>
-      <b>Eficiência Operacional</b>
-      <p><small>Comparado com soluções anteriores</small></p>
-    </td>
-    <td align="center" width="20%">
-      <img src="https://img.shields.io/badge/+85%25-purple?style=for-the-badge" alt="+85%"><br>
-      <b>ROI Médio</b>
-      <p><small>Em projetos enterprise</small></p>
-    </td>
-    <td align="center" width="20%">
-      <img src="https://img.shields.io/badge/23_PAÍSES-orange?style=for-the-badge" alt="23 Países"><br>
-      <b>Alcance Global</b>
-      <p><small>4 continentes</small></p>
-    </td>
-    <td align="center" width="20%">
-      <img src="https://img.shields.io/badge/98%2F100-success?style=for-the-badge" alt="98/100"><br>
-      <b>Performance</b>
-      <p><small>Lighthouse Score</small></p>
-    </td>
-  </tr>
+</td>
+<td width="50%" valign="top">
+
+### Backend
+- 🟢 **Node.js 20+** - Runtime JavaScript com suporte a ESM e performance otimizada
+- 🚂 **Express.js** - Framework web com middleware pipeline e controle de rotas
+- 🔒 **Segurança** - CORS, Helmet, Rate limiting e sanitização de entradas
+- 🔄 **API RESTful** - Endpoints documentados com Swagger e validação de schema
+- 📊 **Analytics engine** - Rastreamento anônimo de eventos e métricas
+- 🔍 **SEO engine** - Geração dinâmica de metadados e implementações para crawlers
+
+</td>
+</tr>
 </table>
 
-<div align="center">
-  <img src="https://via.placeholder.com/900x250?text=Performance+Metrics+Dashboard" alt="Dashboard de métricas" style="max-width: 100%; border-radius: 8px; margin-top: 20px;">
-</div>
+### 🏛️ Arquitetura e Padrões de Desenvolvimento
 
-</details>
-
-<details>
-<summary><b>📋 PRINCIPAIS RECURSOS</b></summary>
-<br>
-
-- **🔍 Diagnóstico Personalizado**: Avaliação detalhada das necessidades do cliente usando IA proprietária
-- **📊 Análise de Dados Avançada**: Visualizações interativas de métricas-chave com dashboards personalizados
-- **📆 Agendamento Inteligente**: Sistema automatizado para marcar consultas com previsão de demanda
-- **💼 Planos Customizados**: Soluções adaptadas a cada perfil de negócio com recomendações baseadas em dados
-- **📱 Design Adaptativo**: Experiência perfeita em qualquer dispositivo com tempos de carregamento otimizados
-- **📧 Comunicação Direta**: Formulário de contato com integração EmailJS e respostas automatizadas
-- **🔐 Área do Cliente**: Portal exclusivo para acompanhamento de projetos em tempo real
-- **🌐 Suporte Multilíngue**: Experiência completa em PT-BR, EN e ES com tradução automática
-- **📈 Analytics Integrado**: Rastreamento completo com Google Analytics 4 e métricas customizadas
-- **🔒 Segurança Avançada**: Proteção de dados com criptografia de ponta a ponta e conformidade LGPD/GDPR
-
-</details>
-
-<details>
-<summary><b>🛠️ STACK TECNOLÓGICO</b></summary>
-<br>
-
-| Front-end | Estilização | Ferramentas | Integração |
-|:-------:|:-------:|:-------:|:-------:|
-| [<img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React" width="100">](https://reactjs.org/) | [<img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" width="130">](https://tailwindcss.com/) | [<img src="https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white" alt="Vite" width="100">](https://vitejs.dev/) | [<img src="https://img.shields.io/badge/EmailJS-FF4785?style=flat-square&logo=framer&logoColor=white" alt="EmailJS" width="100">](https://www.emailjs.com/) |
-| [<img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" width="130">](https://www.typescriptlang.org/) | [<img src="https://img.shields.io/badge/Lucide_Icons-2D3748?style=flat-square&logo=svg&logoColor=white" alt="Lucide React" width="130">](https://lucide.dev/) | [<img src="https://img.shields.io/badge/ESLint-4B32C3?style=flat-square&logo=eslint&logoColor=white" alt="ESLint" width="100">](https://eslint.org/) | [<img src="https://img.shields.io/badge/GA4-E37400?style=flat-square&logo=google-analytics&logoColor=white" alt="Google Analytics" width="100">](https://analytics.google.com/) |
-| [<img src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=next.js&logoColor=white" alt="Next.js" width="100">](https://nextjs.org/) | [<img src="https://img.shields.io/badge/TailwindMerge-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white" alt="Tailwind Merge" width="150">](https://github.com/dcastil/tailwind-merge) | [<img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=github-actions&logoColor=white" alt="GitHub Actions" width="150">](https://github.com/features/actions) | [<img src="https://img.shields.io/badge/SEO_Tools-47A248?style=flat-square&logo=google-search-console&logoColor=white" alt="SEO Tools" width="120">](https://search.google.com/search-console) |
-| [<img src="https://img.shields.io/badge/i18n-26A69A?style=flat-square&logo=i18next&logoColor=white" alt="i18n" width="100">](https://react.i18next.com/) | [<img src="https://img.shields.io/badge/Framer_Motion-0055FF?style=flat-square&logo=framer&logoColor=white" alt="Framer Motion" width="140">](https://www.framer.com/motion/) | [<img src="https://img.shields.io/badge/GTM-4285F4?style=flat-square&logo=google-tag-manager&logoColor=white" alt="Google Tag Manager" width="100">](https://tagmanager.google.com/) | [<img src="https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white" alt="Vercel" width="100">](https://vercel.com/) |
-
-</details>
-
-<details>
-<summary><b>🌐 OTIMIZAÇÃO INTERNACIONAL</b></summary>
-<br>
-
-- **🔍 SEO Multilíngue**: Metatags otimizadas para português, inglês e espanhol que resultaram em aumento de +187% no tráfego orgânico
-- **🔄 hreflang Tags**: Implementação correta para redirecionamento por idioma com detecção automática de localização
-- **📱 Responsividade Global**: Design adaptado para diferentes hábitos de uso regionais testado com usuários reais de 9 países
-- **🌍 Geo Meta Tags**: Configurações específicas para melhor indexação regional com conteúdo localizado geograficamente
-- **📊 Análise por País**: Segmentação de métricas por região geográfica com dashboards personalizados
-- **🔌 CDN Otimizada**: Distribuição de conteúdo com desempenho global via edge network da Vercel
-- **⚡ Performance Internacional**: Tempo de carregamento médio de 1.2s em todas as regiões (95º percentil)
-
-</details>
-
-<details>
-<summary><b>📊 RECONHECIMENTOS & CERTIFICAÇÕES</b></summary>
-<br>
-
-<div align="center">
-  <table>
-    <tr>
-      <td align="center">
-        <img src="https://img.shields.io/badge/Lighthouse-Top_Performance-4285F4?style=flat-square&logo=lighthouse&logoColor=white" alt="Lighthouse" width="180">
-        <p><b>98/100</b> no PageSpeed Insights</p>
-      </td>
-      <td align="center">
-        <img src="https://img.shields.io/badge/WCAG-AAA_Compliant-1A7F37?style=flat-square&logo=w3c&logoColor=white" alt="WCAG" width="150">
-        <p>Certificação de <b>Acessibilidade</b></p>
-      </td>
-      <td align="center">
-        <img src="https://img.shields.io/badge/Carbon_Neutral-Green_Hosting-4CAF50?style=flat-square&logo=earth&logoColor=white" alt="Carbon Neutral" width="170">
-        <p>Hospedagem <b>eco-friendly</b></p>
-      </td>
-    </tr>
-  </table>
-
-  <img src="https://via.placeholder.com/900x150?text=Featured+by+TechCrunch+|+ProductHunt+|+Startup.Guide" alt="Featured In" style="max-width: 100%; border-radius: 8px; margin-top: 20px;">
-</div>
-
-</details>
-
-<br>
-
-## 💻 Projetos Destaque
-
-<div align="center">
-  <table>
-    <tr>
-      <td width="33%" align="center">
-        <img src="https://via.placeholder.com/300x200?text=E-commerce+Platform" alt="E-commerce Platform" style="border-radius: 8px;">
-        <h3>TechMart Platform</h3>
-        <p>E-commerce com +2M usuários mensais e +$15M processados anualmente</p>
-        <p><b>Tech:</b> Next.js, TypeScript, Prisma</p>
-      </td>
-      <td width="33%" align="center">
-        <img src="https://via.placeholder.com/300x200?text=HealthTech+App" alt="HealthTech App" style="border-radius: 8px;">
-        <h3>MediTrack Pro</h3>
-        <p>App de saúde utilizado por +120 clínicas com 99.98% de uptime</p>
-        <p><b>Tech:</b> React Native, Redux, Firebase</p>
-      </td>
-      <td width="33%" align="center">
-        <img src="https://via.placeholder.com/300x200?text=FinTech+Solution" alt="FinTech Solution" style="border-radius: 8px;">
-        <h3>PayFlow</h3>
-        <p>Sistema financeiro integrado que reduziu erros em 95%</p>
-        <p><b>Tech:</b> React, Node.js, PostgreSQL</p>
-      </td>
-    </tr>
-  </table>
-</div>
-
-## 📱 Performance Móvel
-
-<div align="center">
-  <table width="100%">
-    <tr>
-      <td align="center">
-        <img src="https://img.shields.io/badge/Loading_Speed-0.9s-success?style=for-the-badge" alt="Loading Speed">
-        <p>Tempo médio de carregamento em 4G</p>
-      </td>
-      <td align="center">
-        <img src="https://img.shields.io/badge/FID-18ms-success?style=for-the-badge" alt="First Input Delay">
-        <p>First Input Delay (Core Web Vitals)</p>
-      </td>
-      <td align="center">
-        <img src="https://img.shields.io/badge/CLS-0.05-success?style=for-the-badge" alt="Cumulative Layout Shift">
-        <p>Cumulative Layout Shift</p>
-      </td>
-      <td align="center">
-        <img src="https://img.shields.io/badge/LCP-1.2s-success?style=for-the-badge" alt="Largest Contentful Paint">
-        <p>Largest Contentful Paint</p>
-      </td>
-    </tr>
-  </table>
-</div>
-
-## 🖥️ Site ao Vivo
-
-<p align="center">
-  <a href="https://www.devferreirag.com" target="_blank">
-    <img src="https://img.shields.io/badge/VISITE_O_SITE-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Visitar o site">
-  </a>
-  
-  <a href="https://github.com/DevFerreiraG/consultancy" target="_blank">
-    <img src="https://img.shields.io/badge/VER_CÓDIGO-181717?style=for-the-badge&logo=github&logoColor=white" alt="Ver código">
-  </a>
-</p>
-
-<br>
-
-## ⚙️ Instalação e Uso
-
-```bash
-# Clone o repositório
-git clone https://github.com/DevFerreiraG/consultancy.git
-
-# Entre no diretório
-cd consultancy
-
-# Instale as dependências
-npm install
-
-# Configure o EmailJS e Analytics
-# Edite src/components/ContactForm.tsx com suas credenciais
-# Verifique se a ID do GA4 (G-CQMQ2ZPWBZ) está configurada corretamente
-
-# Inicie o servidor de desenvolvimento
-npm run dev
-
-# Para build de produção
-npm run build
+```
+Frontend                           Backend
+┌─────────────────────┐           ┌─────────────────────┐
+│  Componentes React  │◄──────────┤  API RESTful        │
+│  Context Providers  │           │  Controladores      │
+│  Custom Hooks       │──────────►│  Serviços           │
+│  Gerenc. de Estado  │           │  Middlewares        │
+└─────────────────────┘           └─────────────────────┘
+        │                                   │
+        ▼                                   ▼
+┌─────────────────────┐           ┌─────────────────────┐
+│  Tailwind CSS       │           │  Sistemas           │
+│  Lib Acessibilidade │           │  • SEO Engine       │
+│  EmailJS            │           │  • Analytics Engine │
+│  Sistema de Temas   │           │  • Marketing Engine │
+└─────────────────────┘           └─────────────────────┘
 ```
 
-<br>
+- **Padrões Implementados**: Repository, Factory, Service, Singleton, Observer
+- **Princípios**: SOLID, DRY, Clean Code, Clean Architecture
+- **Metodologia**: Atomic Design para componentes frontend
+- **Code Quality**: ESLint, Prettier, TypeScript strict mode
+- **Performance**: Code splitting, lazy loading, memoização, caching
 
-## 📈 Análise de Performance
+## 🚀 Funcionalidades Implementadas
+
+### Sistema Avançado de SEO
+
+- **Metadados Dinâmicos**: Geração de meta tags otimizadas para cada página e idioma
+- **JSON-LD Estruturado**: Schema markup para rich snippets do Google
+- **Sitemap Dinâmico**: Geração automática de sitemap XML e TXT
+- **Prerender**: Renderização otimizada para crawlers de busca
+- **URLs Canônicas**: Prevenção de conteúdo duplicado
+- **hreflang**: Implementação correta para SEO multilíngue
+
+### Sistema de Analytics e Performance
+
+- **Rastreamento Anônimo**: Coleta de dados respeitando privacidade
+- **Métricas de Engajamento**: Tempo na página, profundidade de scroll
+- **Eventos de Interação**: Cliques, visualizações, conversões
+- **Segmentação**: Análise por dispositivo, navegador, localização
+- **Performance**: Métricas Core Web Vitals e LCP
+- **Dashboards**: Visualização de dados em tempo real
+
+### Marketing e Conversão
+
+- **UTM Tracking**: Rastreamento completo de parâmetros de campanha
+- **Funil de Conversão**: Análise de jornada e pontos de abandono
+- **Segmentação por Origem**: Tráfego orgânico vs. pago
+- **Métricas de ROI**: Retorno sobre investimento por canal
+- **Leads**: Captura e gerenciamento de leads
+- **Insights**: Recomendações baseadas em dados
+
+## 🔒 Segurança e DevOps
+
+- **Segurança Web**: Headers de proteção, HTTPS, sanitização de inputs
+- **Proteção Contra Ataques**: Rate limiting, validação de dados
+- **Infraestrutura Cloud**: Vercel para frontend, Node.js para backend
+- **CI/CD**: Pipeline automatizado de integração e deployment
+- **Monitoramento**: Logging estruturado, alertas de erro
+- **Escalabilidade**: Arquitetura preparada para crescimento
+
+## 📱 Responsive Design
+
+<p align="center">
+  <picture>
+    <source media="(max-width: 500px)" srcset="https://placehold.co/800x1600/333/white?text=Mobile+View">
+    <source media="(min-width: 501px)" srcset="https://placehold.co/1600x800/333/white?text=Desktop+View">
+    <img src="https://placehold.co/1600x800/333/white?text=Responsive+Design" width="600">
+  </picture>
+</p>
+
+## 📚 Outras Implementações Técnicas
+
+- Lazy loading e code splitting para carregamento otimizado
+- Tema escuro/claro baseado em preferências do sistema
+- Formulário de contato com validação avançada
+- Otimização de imagens e assets
+- Internacionalização completa (i18n)
+- Animações performáticas com CSS e React
+
+<a name="en"></a>
 
 <div align="center">
-  <img src="https://via.placeholder.com/900x250?text=Analytics+Performance+Dashboard+2023-2024" alt="Dashboard de Performance Analytics" style="max-width: 100%; border-radius: 8px;">
+  <h1>Digital Transformation for Global Companies</h1>
 </div>
 
-<table align="center">
-  <tr>
-    <td align="center" width="25%">
-      <img src="https://img.shields.io/badge/99.2%25-success?style=for-the-badge" alt="99.2%"><br>
-      <b>Satisfação dos Clientes</b>
-    </td>
-    <td align="center" width="25%">
-      <img src="https://img.shields.io/badge/+67%25-blue?style=for-the-badge" alt="+67%"><br>
-      <b>Eficiência Operacional</b>
-    </td>
-    <td align="center" width="25%">
-      <img src="https://img.shields.io/badge/+85%25-purple?style=for-the-badge" alt="+85%"><br>
-      <b>ROI Médio</b>
-    </td>
-    <td align="center" width="25%">
-      <img src="https://img.shields.io/badge/23_PAÍSES-orange?style=for-the-badge" alt="23 Países"><br>
-      <b>Alcance Global</b>
-    </td>
-  </tr>
+## 🔍 Overview
+
+Complete digital consultancy platform developed with modern and scalable architecture, consisting of React frontend and Node.js backend. The system integrates advanced SEO functionalities, analytics, and marketing performance tracking, offering a comprehensive solution for corporate digital presence with multilingual support.
+
+### ⭐ Excellence Metrics
+
+| **Metric** | **Result** | **Metric** | **Result** |
+|-------------|---------------|-------------|---------------|
+| **Performance** | ![98/100](https://img.shields.io/badge/98/100-success?style=flat-square) | **Loading Time** | ![<1.5s](https://img.shields.io/badge/<1.5s-success?style=flat-square) |
+| **SEO** | ![100/100](https://img.shields.io/badge/100/100-success?style=flat-square) | **PageSpeed** | ![Grade A](https://img.shields.io/badge/Grade_A-success?style=flat-square) | 
+| **Accessibility** | ![97/100](https://img.shields.io/badge/97/100-success?style=flat-square) | **Core Web Vitals** | ![Passed](https://img.shields.io/badge/Passed-success?style=flat-square) |
+
+## 🛠️ Technology Stack
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+### Frontend
+- ⚛️ **React 18.3** - Component architecture with advanced Hooks and Context API
+- 🔷 **TypeScript 5.5** - Strong typing with interfaces, generics, and type guards
+- 🎨 **Tailwind CSS 3.4** - Responsive design system with utility classes
+- ⚡ **Vite 5.4** - Optimized build system with HMR and tree-shaking
+- 📱 **Mobile-first** - Optimized experience for all devices
+- 🌙 **Adaptive Theme** - Dark/light system based on preferences
+
+</td>
+<td width="50%" valign="top">
+
+### Backend
+- 🟢 **Node.js 20+** - JavaScript runtime with ESM support and optimized performance
+- 🚂 **Express.js** - Web framework with middleware pipeline and route control
+- 🔒 **Security** - CORS, Helmet, Rate limiting, and input sanitization
+- 🔄 **RESTful API** - Endpoints documented with Swagger and schema validation
+- 📊 **Analytics engine** - Anonymous tracking of events and metrics
+- 🔍 **SEO engine** - Dynamic metadata generation and crawler implementations
+
+</td>
+</tr>
 </table>
 
-<div align="center">
-  <table width="100%">
-    <tr>
-      <td width="33%" align="center">
-        <h3>🌐 Tráfego por Região</h3>
-        <p>América do Norte: 42%</p>
-        <p>Europa: 28%</p>
-        <p>América Latina: 21%</p>
-        <p>Ásia: 7%</p>
-        <p>Outros: 2%</p>
-      </td>
-      <td width="33%" align="center">
-        <h3>📱 Dispositivos</h3>
-        <p>Mobile: 64%</p>
-        <p>Desktop: 29%</p>
-        <p>Tablet: 7%</p>
-      </td>
-      <td width="33%" align="center">
-        <h3>🔍 Fontes</h3>
-        <p>Busca Orgânica: 53%</p>
-        <p>Direto: 18%</p>
-        <p>Redes Sociais: 17%</p>
-        <p>Referências: 12%</p>
-      </td>
-    </tr>
-  </table>
-</div>
+### 🏛️ Architecture and Development Patterns
 
-<br>
-
-## 📊 Impacto de Negócio
-
-<div align="center">
-  <table>
-    <tr>
-      <td align="center" width="33%">
-        <img src="https://img.shields.io/badge/+187%25-success?style=for-the-badge" alt="+187%">
-        <h3>Crescimento em Tráfego</h3>
-        <p>Aumento anual de tráfego orgânico</p>
-      </td>
-      <td align="center" width="33%">
-        <img src="https://img.shields.io/badge/9.6%25-success?style=for-the-badge" alt="9.6%">
-        <h3>Taxa de Conversão</h3>
-        <p>3.2x acima da média do setor</p>
-      </td>
-      <td align="center" width="33%">
-        <img src="https://img.shields.io/badge/94.3%25-success?style=for-the-badge" alt="94.3%">
-        <h3>Retenção de Clientes</h3>
-        <p>Renovação anual de contratos</p>
-      </td>
-    </tr>
-  </table>
-</div>
-
-<br>
-
-## 📊 Integração com Analytics
-
-O projeto utiliza Google Analytics 4 (GA4) com ID `G-CQMQ2ZPWBZ` para rastreamento avançado de métricas e comportamento do usuário. A implementação inclui:
-
-- **👥 Segmentação por Idioma**: Análise de comportamento por preferência de idioma com insights customizados
-- **🌍 Métricas Geográficas**: Rastreamento de origem de tráfego por país e região com funis de conversão localizados
-- **⏱️ Tempo de Engajamento**: Métricas detalhadas de uso por seção com heat maps e gravações de sessão
-- **📱 Análise por Dispositivo**: Segmentação de uso por dispositivo e tamanho de tela para otimização contínua
-- **🔄 Fluxo de Conversão**: Acompanhamento de funil de conversão multilíngue com testes A/B automatizados
-
-<br>
-
-## 🏆 Depoimentos de Clientes
-
-<div align="center">
-  <table>
-    <tr>
-      <td width="33%">
-        <blockquote>
-          "A consultoria da DevFerreiraG transformou completamente nossa presença digital, resultando em um aumento de 215% nas conversões."
-        </blockquote>
-        <p><b>- Carlos Mendes, CEO da TechSolutions</b></p>
-      </td>
-      <td width="33%">
-        <blockquote>
-          "Implementação impecável e suporte excepcional. Nosso ROI superou todas as expectativas em apenas 3 meses."
-        </blockquote>
-        <p><b>- Luisa Alvarez, CTO da GlobalData</b></p>
-      </td>
-      <td width="33%">
-        <blockquote>
-          "A equipe da DevFerreiraG entregou uma solução que não apenas atendeu, mas superou nossas necessidades. Altamente recomendado!"
-        </blockquote>
-        <p><b>- Robert Johnson, Diretor de Inovação da EuroTech</b></p>
-      </td>
-    </tr>
-  </table>
-</div>
-
-## 📧 Entre em Contato
-
-<p align="center">
-  <a href="https://www.linkedin.com/in/devferreirag/" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
-  </a>
-  <a href="https://github.com/DevFerreiraG" target="_blank">
-    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
-  </a>
-  <a href="mailto:consultoria@devferreirag.com">
-    <img src="https://img.shields.io/badge/Email-0078D4?style=for-the-badge&logo=microsoft-outlook&logoColor=white" alt="Email">
-  </a>
-  <a href="https://calendly.com/devferreirag/30min" target="_blank">
-    <img src="https://img.shields.io/badge/Agendar_Reunião-4285F4?style=for-the-badge&logo=google-calendar&logoColor=white" alt="Calendly">
-  </a>
-</p>
-
-<br>
-
-<div align="center">
-  <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" alt="linha colorida">
-</div>
-
-<a name="english"></a>
-<br>
-
-<p align="center">
-  <a href="#">Português</a> |
-  <b>🌍 English</b> |
-  <a href="#español">Español</a>
-</p>
-
-> ### 💡 "Empowering businesses through strategic technology consulting with global reach"
-
-## 🚀 Overview
-
-Premium consultancy platform with an elegant and intuitive interface, designed to connect businesses with customized technological solutions on a global scale. Developed with a focus on user experience, exceptional performance, and optimized for international reach with support for Portuguese, English, and Spanish.
-
-<details open>
-<summary><b>📊 PROVEN RESULTS</b></summary>
-<br>
-
-<table align="center">
-  <tr>
-    <td align="center" width="20%">
-      <img src="https://img.shields.io/badge/99.2%25-success?style=for-the-badge" alt="99.2%"><br>
-      <b>Client Satisfaction</b>
-      <p><small>+1,500 reviews collected</small></p>
-    </td>
-    <td align="center" width="20%">
-      <img src="https://img.shields.io/badge/+67%25-blue?style=for-the-badge" alt="+67%"><br>
-      <b>Operational Efficiency</b>
-      <p><small>Compared to previous solutions</small></p>
-    </td>
-    <td align="center" width="20%">
-      <img src="https://img.shields.io/badge/+85%25-purple?style=for-the-badge" alt="+85%"><br>
-      <b>Average ROI</b>
-      <p><small>For enterprise projects</small></p>
-    </td>
-    <td align="center" width="20%">
-      <img src="https://img.shields.io/badge/23_COUNTRIES-orange?style=for-the-badge" alt="23 Countries"><br>
-      <b>Global Reach</b>
-      <p><small>4 continents</small></p>
-    </td>
-    <td align="center" width="20%">
-      <img src="https://img.shields.io/badge/98%2F100-success?style=for-the-badge" alt="98/100"><br>
-      <b>Performance</b>
-      <p><small>Lighthouse Score</small></p>
-    </td>
-  </tr>
-</table>
-
-<div align="center">
-  <img src="https://via.placeholder.com/900x250?text=Performance+Metrics+Dashboard" alt="Metrics dashboard" style="max-width: 100%; border-radius: 8px; margin-top: 20px;">
-</div>
-
-</details>
-
-<details>
-<summary><b>📋 KEY FEATURES</b></summary>
-<br>
-
-- **🔍 Personalized Diagnosis**: Detailed assessment of client needs
-- **📊 Advanced Data Analysis**: Interactive visualizations of key metrics
-- **📆 Intelligent Scheduling**: Automated system for booking consultations
-- **💼 Custom Plans**: Solutions tailored to each business profile
-- **📱 Responsive Design**: Perfect experience on any device
-- **📧 Direct Communication**: Contact form with EmailJS integration
-- **🔐 Client Portal**: Exclusive platform for project tracking
-- **🌐 Multilingual Support**: Complete experience in PT-BR, EN, and ES
-- **📈 Integrated Analytics**: Comprehensive tracking with Google Analytics 4
-
-</details>
-
-<details>
-<summary><b>🌐 INTERNATIONAL OPTIMIZATION</b></summary>
-<br>
-
-- **🔍 Multilingual SEO**: Optimized metatags for Portuguese, English, and Spanish
-- **🔄 hreflang Tags**: Proper implementation for language-based redirection
-- **📱 Global Responsiveness**: Design adapted for different regional usage habits
-- **🌍 Geo Meta Tags**: Specific configurations for better regional indexing
-- **📊 Country Analytics**: Metric segmentation by geographic region
-- **🔌 Optimized CDN**: Content distribution with global performance
-- **⚡ International Performance**: Loading time optimized for different regions
-
-</details>
-
-<br>
-
-## 🖥️ Live Site
-
-<p align="center">
-  <a href="https://www.devferreirag.com" target="_blank">
-    <img src="https://img.shields.io/badge/VISIT_THE_SITE-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Visit the site">
-  </a>
-</p>
-
-<br>
-
-## ⚙️ Installation & Usage
-
-```bash
-# Clone the repository
-git clone https://github.com/DevFerreiraG/consultancy.git
-
-# Navigate to directory
-cd consultancy
-
-# Install dependencies
-npm install
-
-# Configure EmailJS and Analytics
-# Edit src/components/ContactForm.tsx with your credentials
-# Verify if GA4 ID (G-CQMQ2ZPWBZ) is properly configured
-
-# Start development server
-npm run dev
+```
+Frontend                           Backend
+┌─────────────────────┐           ┌─────────────────────┐
+│  React Components   │◄──────────┤  RESTful API        │
+│  Context Providers  │           │  Controllers        │
+│  Custom Hooks       │──────────►│  Services           │
+│  State Management   │           │  Middlewares        │
+└─────────────────────┘           └─────────────────────┘
+        │                                   │
+        ▼                                   ▼
+┌─────────────────────┐           ┌─────────────────────┐
+│  Tailwind CSS       │           │  Systems            │
+│  Accessibility Lib  │           │  • SEO Engine       │
+│  EmailJS            │           │  • Analytics Engine  │
+│  Theme System       │           │  • Marketing Engine  │
+└─────────────────────┘           └─────────────────────┘
 ```
 
-<br>
+- **Implemented Patterns**: Repository, Factory, Service, Singleton, Observer
+- **Principles**: SOLID, DRY, Clean Code, Clean Architecture
+- **Methodology**: Atomic Design for frontend components
+- **Code Quality**: ESLint, Prettier, TypeScript strict mode
+- **Performance**: Code splitting, lazy loading, memoization, caching
 
-## 📈 Performance Analysis
+## 🚀 Implemented Features
+
+### Advanced SEO System
+
+- **Dynamic Metadata**: Generation of optimized meta tags for each page and language
+- **Structured JSON-LD**: Schema markup for Google rich snippets
+- **Dynamic Sitemap**: Automatic generation of XML and TXT sitemaps
+- **Prerender**: Optimized rendering for search crawlers
+- **Canonical URLs**: Prevention of duplicate content
+- **hreflang**: Correct implementation for multilingual SEO
+
+### Analytics and Performance System
+
+- **Anonymous Tracking**: Data collection respecting privacy
+- **Engagement Metrics**: Time on page, scroll depth
+- **Interaction Events**: Clicks, views, conversions
+- **Segmentation**: Analysis by device, browser, location
+- **Performance**: Core Web Vitals and LCP metrics
+- **Dashboards**: Real-time data visualization
+
+### Marketing and Conversion
+
+- **UTM Tracking**: Complete tracking of campaign parameters
+- **Conversion Funnel**: Journey analysis and abandonment points
+- **Source Segmentation**: Organic vs. paid traffic
+- **ROI Metrics**: Return on investment by channel
+- **Leads**: Lead capture and management
+- **Insights**: Data-based recommendations
+
+## 🔒 Security and DevOps
+
+- **Web Security**: Protection headers, HTTPS, input sanitization
+- **Attack Protection**: Rate limiting, data validation
+- **Cloud Infrastructure**: Vercel for frontend, Node.js for backend
+- **CI/CD**: Automated integration and deployment pipeline
+- **Monitoring**: Structured logging, error alerts
+- **Scalability**: Architecture prepared for growth
+
+## 📱 Responsive Design
+
+<p align="center">
+  <picture>
+    <source media="(max-width: 500px)" srcset="https://placehold.co/800x1600/333/white?text=Mobile+View">
+    <source media="(min-width: 501px)" srcset="https://placehold.co/1600x800/333/white?text=Desktop+View">
+    <img src="https://placehold.co/1600x800/333/white?text=Responsive+Design" width="600">
+  </picture>
+</p>
+
+## 📚 Other Technical Implementations
+
+- Lazy loading and code splitting for optimized loading
+- Dark/light theme based on system preferences
+- Contact form with advanced validation
+- Image and asset optimization
+- Complete internationalization (i18n)
+- Performant animations with CSS and React
+
+<a name="es"></a>
 
 <div align="center">
-  <img src="https://via.placeholder.com/900x250?text=Analytics+Performance+Dashboard+2023-2024" alt="Dashboard de Performance Analytics" style="max-width: 100%; border-radius: 8px;">
+  <h1>Transformación Digital para Empresas Globales</h1>
 </div>
 
-<table align="center">
-  <tr>
-    <td align="center" width="25%">
-      <img src="https://img.shields.io/badge/99.2%25-success?style=for-the-badge" alt="99.2%"><br>
-      <b>Satisfação dos Clientes</b>
-    </td>
-    <td align="center" width="25%">
-      <img src="https://img.shields.io/badge/+67%25-blue?style=for-the-badge" alt="+67%"><br>
-      <b>Eficiência Operacional</b>
-    </td>
-    <td align="center" width="25%">
-      <img src="https://img.shields.io/badge/+85%25-purple?style=for-the-badge" alt="+85%"><br>
-      <b>ROI Médio</b>
-    </td>
-    <td align="center" width="25%">
-      <img src="https://img.shields.io/badge/23_PAÍSES-orange?style=for-the-badge" alt="23 Países"><br>
-      <b>Alcance Global</b>
-    </td>
-  </tr>
+## 🔍 Visión General
+
+Plataforma completa de consultoría digital desarrollada con arquitectura moderna y escalable, compuesta por frontend React y backend Node.js. El sistema integra funcionalidades avanzadas de SEO, analytics y seguimiento de rendimiento de marketing, ofreciendo una solución completa para presencia digital corporativa con soporte multilingüe.
+
+### ⭐ Métricas de Excelencia
+
+| **Métrica** | **Resultado** | **Métrica** | **Resultado** |
+|-------------|---------------|-------------|---------------|
+| **Rendimiento** | ![98/100](https://img.shields.io/badge/98/100-success?style=flat-square) | **Tiempo de Carga** | ![<1.5s](https://img.shields.io/badge/<1.5s-success?style=flat-square) |
+| **SEO** | ![100/100](https://img.shields.io/badge/100/100-success?style=flat-square) | **PageSpeed** | ![Grado A](https://img.shields.io/badge/Grado_A-success?style=flat-square) | 
+| **Accesibilidad** | ![97/100](https://img.shields.io/badge/97/100-success?style=flat-square) | **Core Web Vitals** | ![Aprobado](https://img.shields.io/badge/Aprobado-success?style=flat-square) |
+
+## 🛠️ Stack Tecnológico
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+### Frontend
+- ⚛️ **React 18.3** - Arquitectura de componentes con Hooks avanzados y Context API
+- 🔷 **TypeScript 5.5** - Tipado fuerte con interfaces, generics y type guards
+- 🎨 **Tailwind CSS 3.4** - Sistema de diseño responsivo con clases utilitarias
+- ⚡ **Vite 5.4** - Sistema de build optimizado con HMR y tree-shaking
+- 📱 **Mobile-first** - Experiencia optimizada para todos los dispositivos
+- 🌙 **Tema adaptativo** - Sistema claro/oscuro basado en preferencias
+
+</td>
+<td width="50%" valign="top">
+
+### Backend
+- 🟢 **Node.js 20+** - Runtime JavaScript con soporte ESM y rendimiento optimizado
+- 🚂 **Express.js** - Framework web con pipeline de middleware y control de rutas
+- 🔒 **Seguridad** - CORS, Helmet, Rate limiting y sanitización de entradas
+- 🔄 **API RESTful** - Endpoints documentados con Swagger y validación de esquema
+- 📊 **Motor de Analytics** - Seguimiento anónimo de eventos y métricas
+- 🔍 **Motor SEO** - Generación dinámica de metadatos e implementaciones para crawlers
+
+</td>
+</tr>
 </table>
 
-<div align="center">
-  <table width="100%">
-    <tr>
-      <td width="33%" align="center">
-        <h3>🌐 Tráfego por Região</h3>
-        <p>América do Norte: 42%</p>
-        <p>Europa: 28%</p>
-        <p>América Latina: 21%</p>
-        <p>Ásia: 7%</p>
-        <p>Outros: 2%</p>
-      </td>
-      <td width="33%" align="center">
-        <h3>📱 Dispositivos</h3>
-        <p>Mobile: 64%</p>
-        <p>Desktop: 29%</p>
-        <p>Tablet: 7%</p>
-      </td>
-      <td width="33%" align="center">
-        <h3>🔍 Fontes</h3>
-        <p>Busca Orgânica: 53%</p>
-        <p>Direto: 18%</p>
-        <p>Redes Sociais: 17%</p>
-        <p>Referências: 12%</p>
-      </td>
-    </tr>
-  </table>
-</div>
+### 🏛️ Arquitectura y Patrones de Desarrollo
 
-<br>
-
-## 📊 Impacto de Negócio
-
-<div align="center">
-  <table>
-    <tr>
-      <td align="center" width="33%">
-        <img src="https://img.shields.io/badge/+187%25-success?style=for-the-badge" alt="+187%">
-        <h3>Crescimento em Tráfego</h3>
-        <p>Aumento anual de tráfego orgânico</p>
-      </td>
-      <td align="center" width="33%">
-        <img src="https://img.shields.io/badge/9.6%25-success?style=for-the-badge" alt="9.6%">
-        <h3>Taxa de Conversão</h3>
-        <p>3.2x acima da média do setor</p>
-      </td>
-      <td align="center" width="33%">
-        <img src="https://img.shields.io/badge/94.3%25-success?style=for-the-badge" alt="94.3%">
-        <h3>Retenção de Clientes</h3>
-        <p>Renovação anual de contratos</p>
-      </td>
-    </tr>
-  </table>
-</div>
-
-<br>
-
-## 📊 Analytics Integration
-
-The project uses Google Analytics 4 (GA4) with ID `G-CQMQ2ZPWBZ` for advanced tracking of metrics and user behavior. The implementation includes:
-
-- **👥 Language Segmentation**: Analysis of behavior by language preference
-- **🌍 Geographic Metrics**: Tracking of traffic origin by country and region
-- **⏱️ Engagement Time**: Detailed usage metrics by section
-- **📱 Device Analysis**: Usage segmentation by device and screen size
-- **🔄 Conversion Flow**: Monitoring of multilingual conversion funnel
-
-<br>
-
-## 🏆 Depoimentos de Clientes
-
-<div align="center">
-  <table>
-    <tr>
-      <td width="33%">
-        <blockquote>
-          "A consultoria da DevFerreiraG transformou completamente nossa presença digital, resultando em um aumento de 215% nas conversões."
-        </blockquote>
-        <p><b>- Carlos Mendes, CEO da TechSolutions</b></p>
-      </td>
-      <td width="33%">
-        <blockquote>
-          "Implementação impecável e suporte excepcional. Nosso ROI superou todas as expectativas em apenas 3 meses."
-        </blockquote>
-        <p><b>- Luisa Alvarez, CTO da GlobalData</b></p>
-      </td>
-      <td width="33%">
-        <blockquote>
-          "A equipe da DevFerreiraG entregou uma solução que não apenas atendeu, mas superou nossas necessidades. Altamente recomendado!"
-        </blockquote>
-        <p><b>- Robert Johnson, Diretor de Inovação da EuroTech</b></p>
-      </td>
-    </tr>
-  </table>
-</div>
-
-## 📧 Contact
-
-<p align="center">
-  <a href="https://www.linkedin.com/in/devferreirag/" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
-  </a>
-  <a href="https://github.com/DevFerreiraG" target="_blank">
-    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
-  </a>
-  <a href="mailto:consultoria@devferreirag.com">
-    <img src="https://img.shields.io/badge/Email-0078D4?style=for-the-badge&logo=microsoft-outlook&logoColor=white" alt="Email">
-  </a>
-</p>
-
-<br>
-
-<div align="center">
-  <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" alt="linha colorida">
-</div>
-
-<a name="español"></a>
-<br>
-
-<p align="center">
-  <a href="#">Português</a> |
-  <a href="#english">English</a> |
-  <b>🌍 Español</b>
-</p>
-
-> ### 💡 "Potenciando negocios a través de consultoría tecnológica estratégica con alcance global"
-
-## 🚀 Visión General
-
-Plataforma de consultoría premium con interfaz elegante e intuitiva, diseñada para conectar empresas con soluciones tecnológicas personalizadas a escala global. Desarrollada con enfoque en la experiencia del usuario, rendimiento excepcional y optimizada para alcance internacional con soporte para portugués, inglés y español.
-
-<details>
-<summary><b>📋 CARACTERÍSTICAS PRINCIPALES</b></summary>
-<br>
-
-- **🔍 Diagnóstico Personalizado**: Evaluación detallada de las necesidades del cliente
-- **📊 Análisis de Datos Avanzado**: Visualizaciones interactivas de métricas clave
-- **📆 Programación Inteligente**: Sistema automatizado para agendar consultas
-- **💼 Planes Personalizados**: Soluciones adaptadas a cada perfil de negocio
-- **📱 Diseño Adaptativo**: Experiencia perfecta en cualquier dispositivo
-- **📧 Comunicación Directa**: Formulario de contacto con integración EmailJS
-- **🔐 Portal del Cliente**: Plataforma exclusiva para seguimiento de proyectos
-- **🌐 Soporte Multilingüe**: Experiencia completa en PT-BR, EN y ES
-- **📈 Analytics Integrado**: Seguimiento completo con Google Analytics 4
-
-</details>
-
-<details>
-<summary><b>🌐 OPTIMIZACIÓN INTERNACIONAL</b></summary>
-<br>
-
-- **🔍 SEO Multilingüe**: Metatags optimizadas para portugués, inglés y español
-- **🔄 Etiquetas hreflang**: Implementación correcta para redirección por idioma
-- **📱 Capacidad de Respuesta Global**: Diseño adaptado a diferentes hábitos de uso regionales
-- **🌍 Geo Meta Tags**: Configuraciones específicas para mejor indexación regional
-- **📊 Análisis por País**: Segmentación de métricas por región geográfica
-- **🔌 CDN Optimizada**: Distribución de contenido con rendimiento global
-- **⚡ Rendimiento Internacional**: Tiempo de carga optimizado para diferentes regiones
-
-</details>
-
-<br>
-
-## 🖥️ Sitio en Vivo
-
-<p align="center">
-  <a href="https://www.devferreirag.com" target="_blank">
-    <img src="https://img.shields.io/badge/VISITAR_EL_SITIO-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Visitar el sitio">
-  </a>
-</p>
-
-<br>
-
-## ⚙️ Instalación y Uso
-
-```bash
-# Clonar el repositorio
-git clone https://github.com/DevFerreiraG/consultancy.git
-
-# Entrar al directorio
-cd consultancy
-
-# Instalar dependencias
-npm install
-
-# Configurar EmailJS y Analytics
-# Editar src/components/ContactForm.tsx con sus credenciales
-# Verificar si el ID de GA4 (G-CQMQ2ZPWBZ) está configurado correctamente
-
-# Iniciar servidor de desarrollo
-npm run dev
+```
+Frontend                           Backend
+┌─────────────────────┐           ┌─────────────────────┐
+│  Componentes React  │◄──────────┤  API RESTful        │
+│  Context Providers  │           │  Controladores      │
+│  Custom Hooks       │──────────►│  Servicios          │
+│  Gestión de Estado  │           │  Middlewares        │
+└─────────────────────┘           └─────────────────────┘
+        │                                   │
+        ▼                                   ▼
+┌─────────────────────┐           ┌─────────────────────┐
+│  Tailwind CSS       │           │  Sistemas           │
+│  Lib Accesibilidad  │           │  • Motor SEO        │
+│  EmailJS            │           │  • Motor Analytics  │
+│  Sistema de Temas   │           │  • Motor Marketing  │
+└─────────────────────┘           └─────────────────────┘
 ```
 
-<br>
+- **Patrones Implementados**: Repository, Factory, Service, Singleton, Observer
+- **Principios**: SOLID, DRY, Clean Code, Clean Architecture
+- **Metodología**: Atomic Design para componentes frontend
+- **Calidad de Código**: ESLint, Prettier, TypeScript strict mode
+- **Rendimiento**: Code splitting, lazy loading, memoización, caché
 
-## 📈 Análisis de Rendimiento
+## 🚀 Funcionalidades Implementadas
+
+### Sistema Avanzado de SEO
+
+- **Metadatos Dinámicos**: Generación de meta tags optimizadas para cada página e idioma
+- **JSON-LD Estructurado**: Schema markup para rich snippets de Google
+- **Sitemap Dinámico**: Generación automática de sitemap XML y TXT
+- **Prerender**: Renderización optimizada para crawlers de búsqueda
+- **URLs Canónicas**: Prevención de contenido duplicado
+- **hreflang**: Implementación correcta para SEO multilingüe
+
+### Sistema de Analytics y Rendimiento
+
+- **Seguimiento Anónimo**: Recolección de datos respetando privacidad
+- **Métricas de Engagement**: Tiempo en página, profundidad de scroll
+- **Eventos de Interacción**: Clics, visualizaciones, conversiones
+- **Segmentación**: Análisis por dispositivo, navegador, ubicación
+- **Rendimiento**: Métricas Core Web Vitals y LCP
+- **Dashboards**: Visualización de datos en tiempo real
+
+### Marketing y Conversión
+
+- **Seguimiento UTM**: Rastreo completo de parámetros de campaña
+- **Embudo de Conversión**: Análisis de recorrido y puntos de abandono
+- **Segmentación por Origen**: Tráfico orgánico vs. pago
+- **Métricas de ROI**: Retorno sobre inversión por canal
+- **Leads**: Captura y gestión de leads
+- **Insights**: Recomendaciones basadas en datos
+
+## 🔒 Seguridad y DevOps
+
+- **Seguridad Web**: Headers de protección, HTTPS, sanitización de inputs
+- **Protección Contra Ataques**: Rate limiting, validación de datos
+- **Infraestructura Cloud**: Vercel para frontend, Node.js para backend
+- **CI/CD**: Pipeline automatizado de integración y despliegue
+- **Monitorización**: Logging estructurado, alertas de error
+- **Escalabilidad**: Arquitectura preparada para crecimiento
+
+## 📱 Diseño Responsivo
 
 <p align="center">
-  <img src="https://via.placeholder.com/800x200?text=Panel+de+Rendimiento+Analytics" alt="Panel de Rendimiento Analytics">
+  <picture>
+    <source media="(max-width: 500px)" srcset="https://placehold.co/800x1600/333/white?text=Vista+Móvil">
+    <source media="(min-width: 501px)" srcset="https://placehold.co/1600x800/333/white?text=Vista+Desktop">
+    <img src="https://placehold.co/1600x800/333/white?text=Diseño+Responsivo" width="600">
+  </picture>
 </p>
 
-<table align="center">
-  <tr>
-    <td align="center" width="25%">
-      <img src="https://img.shields.io/badge/97%25-green?style=for-the-badge" alt="97%"><br>
-      <b>Satisfacción de Clientes</b>
-    </td>
-    <td align="center" width="25%">
-      <img src="https://img.shields.io/badge/+45%25-blue?style=for-the-badge" alt="+45%"><br>
-      <b>Eficiencia Operativa</b>
-    </td>
-    <td align="center" width="25%">
-      <img src="https://img.shields.io/badge/+60%25-purple?style=for-the-badge" alt="+60%"><br>
-      <b>ROI Promedio</b>
-    </td>
-    <td align="center" width="25%">
-      <img src="https://img.shields.io/badge/15_PAÍSES-orange?style=for-the-badge" alt="15 Países"><br>
-      <b>Alcance Global</b>
-    </td>
-  </tr>
-</table>
+## 📚 Otras Implementaciones Técnicas
 
-<br>
+- Lazy loading y code splitting para carga optimizada
+- Tema oscuro/claro basado en preferencias del sistema
+- Formulario de contacto con validación avanzada
+- Optimización de imágenes y assets
+- Internacionalización completa (i18n)
+- Animaciones performantes con CSS y React
 
-## 📊 Analytics Integration
-
-El proyecto utiliza Google Analytics 4 (GA4) con ID `G-CQMQ2ZPWBZ` para seguimiento avanzado de métricas y comportamiento del usuario. La implementación incluye:
-
-- **👥 Language Segmentation**: Analysis of behavior by language preference
-- **🌍 Geographic Metrics**: Tracking of traffic origin by country and region
-- **⏱️ Engagement Time**: Detailed usage metrics by section
-- **📱 Device Analysis**: Usage segmentation by device and screen size
-- **🔄 Conversion Flow**: Monitoring of multilingual conversion funnel
-
-<br>
-
-## 📬 Contacto
-
-<p align="center">
-  <a href="https://www.linkedin.com/in/devferreirag/" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
-  </a>
-  <a href="https://github.com/DevFerreiraG" target="_blank">
-    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
-  </a>
-  <a href="mailto:consultoria@devferreirag.com">
-    <img src="https://img.shields.io/badge/Email-0078D4?style=for-the-badge&logo=microsoft-outlook&logoColor=white" alt="Email">
-  </a>
-</p>
-
-<br>
+---
 
 <div align="center">
-  <p>Desarrollado con ❤️ por DevFerreiraG</p>
+  <h3>
+    <a href="https://www.devferreirag.com" target="_blank">
+      www.devferreirag.com
+    </a>
+  </h3>
   
-  <a href="https://www.devferreirag.com">
-    <img src="https://img.shields.io/badge/www.devferreirag.com-000000?style=for-the-badge&logo=safari&logoColor=white" alt="DevFerreiraG">
-  </a>
+  <p>
+    <a href="mailto:contato@devferreirag.com">contato@devferreirag.com</a> | 
+    <a href="https://github.com/devferreirag">GitHub</a>
+  </p>
+  
+  <p>© 2023-2024 DevFerreiraG. Todos os direitos reservados.</p>
 </div>
