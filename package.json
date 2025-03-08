@@ -13,7 +13,7 @@
     "build:backend": "npm run -w backend build",
     "preview": "npm run -w frontend preview",
     "build": "npm run build:frontend",
-    "vercel-build": "cd frontend && npm install && npm run build"
+    "vercel-build": "cd frontend && npm install --force && npm run build"
   },
   "devDependencies": {
     "@jridgewell/gen-mapping": "^0.3.8"
