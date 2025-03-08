@@ -297,11 +297,11 @@ function App() {
                       <div>
                         <h3 className="text-lg font-semibold">{t('contact.email')}</h3>
                         <a
-                          href="mailto:contact@devferreirag.com"
+                          href="mailto:Contato.FerreiraG@outlook.com"
                           className="text-gray-400 hover:text-purple-400 transition-colors"
                           aria-label={t('contact.emailAriaLabel')}
                         >
-                          contact@devferreirag.com
+                          Contato.FerreiraG@outlook.com
                         </a>
                       </div>
                     </div>
@@ -313,11 +313,11 @@ function App() {
                       <div>
                         <h3 className="text-lg font-semibold">{t('contact.phone')}</h3>
                         <a
-                          href="tel:+5511912345678"
+                          href="tel:+5524998706745"
                           className="text-gray-400 hover:text-purple-400 transition-colors"
                           aria-label={t('contact.phoneAriaLabel')}
                         >
-                          +55 11 91234-5678
+                          +55 24 99870-6745
                         </a>
                       </div>
                     </div>
@@ -328,7 +328,7 @@ function App() {
                       </div>
                       <div>
                         <h3 className="text-lg font-semibold">{t('contact.location')}</h3>
-                        <p className="text-gray-400">São Paulo, Brasil</p>
+                        <p className="text-gray-400">Rio de Janeiro, Brasil</p>
                       </div>
                     </div>
                   </div>

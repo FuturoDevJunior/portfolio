@@ -27,6 +27,24 @@ fi
 echo -e "${GREEN}Iniciando o backend...${NC}"
 # Usar cd com || exit para evitar continuar se o diretório não existir
 cd "${PROJECT_ROOT}/backend" || { echo -e "${RED}ERRO: Diretório backend não encontrado${NC}"; exit 1; }
-# Limitar uso de memória para evitar que seja finalizado pelo OS
-export NODE_OPTIONS="--max-old-space-size=2048"
+
+# Limitar uso de memória para evitar OOM killer
+# Removida flag incompatível
+export NODE_OPTIONS="--max-old-space-size=4096"
+
+# Verificar se o arquivo .env.development existe e usá-lo
+if [ -f ".env.development" ]; then
+    echo -e "${GREEN}Usando configurações de desenvolvimento...${NC}"
+    set -a
+    source .env.development
+    set +a
+fi
+
+# Verificar se o build existe
+if [ ! -d "dist" ] || [ ! -f "dist/index.js" ]; then
+    echo -e "${YELLOW}Build não encontrado. Executando npm run build...${NC}"
+    npm run build
+fi
+
+echo -e "${GREEN}Executando o backend em modo desenvolvimento...${NC}"
 NODE_ENV=development node dist/index.js 

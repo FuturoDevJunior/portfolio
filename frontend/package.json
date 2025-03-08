@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview --port 5174",
+    "serve-spa": "npm run build && npx serve -s dist"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
@@ -15,10 +16,13 @@
     "lucide-react": "^0.344.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-router-dom": "^7.3.0",
     "tailwind-merge": "^2.2.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.1",
+    "@jridgewell/gen-mapping": "^0.3.8",
+    "@types/node": "^22.13.9",
     "@types/react": "^18.3.5",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.1",
@@ -28,9 +32,11 @@
     "eslint-plugin-react-refresh": "^0.4.11",
     "globals": "^15.9.0",
     "postcss": "^8.4.35",
+    "serve": "^14.2.4",
     "tailwindcss": "^3.4.1",
+    "terser": "^5.39.0",
     "typescript": "^5.5.3",
     "typescript-eslint": "^8.3.0",
-    "vite": "^5.4.2"
+    "vite": "^6.2.1"
   }
 }

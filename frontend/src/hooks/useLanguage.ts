@@ -1,19 +1,21 @@
 import { useState, useCallback } from 'react';
 import { Language, translations } from '../lib/i18n';
 
+// Definir um tipo para a função de tradução que permite retornar
+// tanto string quanto objetos aninhados do tipo de tradução
+export type TranslationFunction = (path: string) => string | Record<string, any>;
+
 export function useLanguage() {
   const [language, setLanguage] = useState<Language>('pt');
 
-  const t = useCallback((path: string) => {
+  const t: TranslationFunction = useCallback((path: string) => {
     try {
       // Implementação mais segura que evita erros de tipagem
       const keys = path.split('.');
-      let value = translations[language];
+      let value: any = translations[language];
 
       for (const key of keys) {
-        // @ts-expect-error - Acessando propriedades dinâmicas em objetos aninhados
         if (value && typeof value === 'object' && key in value) {
-          // @ts-expect-error - Acessando valores em objetos aninhados com chaves dinâmicas
           value = value[key];
         } else {
           console.warn(`Translation path "${path}" leads to undefined at "${key}"`);

@@ -1,0 +1,24 @@
+{
+  "name": "devferreirag-workspace",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "start:frontend": "npm run -w frontend dev",
+    "start:backend": "npm run -w backend dev",
+    "build:frontend": "npm run -w frontend build",
+    "build:backend": "npm run -w backend build",
+    "preview": "npm run -w frontend preview",
+    "build": "npm run build:frontend",
+    "vercel-build": "cd frontend && npm install && npm run build"
+  },
+  "devDependencies": {
+    "@jridgewell/gen-mapping": "^0.3.8"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

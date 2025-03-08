@@ -12,7 +12,7 @@
     <title>DevFerreiraG - Desenvolvimento Web Profissional</title>
     <!-- Google Tag Manager -->
     <script>
-      if ("%VITE_GTM_ID%" !== "" && location.hostname !== "localhost") {
+      if (location.hostname !== "localhost") {
         (function (w, d, s, l, i) {
           w[l] = w[l] || [];
           w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
@@ -22,7 +22,7 @@
           j.async = true;
           j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
           f.parentNode.insertBefore(j, f);
-        })(window, document, "script", "dataLayer", "%VITE_GTM_ID%");
+        })(window, document, "script", "dataLayer", "GTM-EXAMPLE");
       }
     </script>
     <!-- End Google Tag Manager -->
@@ -31,7 +31,7 @@
     <!-- Google Tag Manager (noscript) -->
     <noscript>
       <iframe
-        src="https://www.googletagmanager.com/ns.html?id=%VITE_GTM_ID%"
+        src="https://www.googletagmanager.com/ns.html?id=GTM-EXAMPLE"
         height="0"
         width="0"
         style="display: none; visibility: hidden"

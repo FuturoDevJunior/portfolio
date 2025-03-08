@@ -1,1 +1,42 @@
 node_modules
+.DS_Store
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Arquivos de build
+dist
+build
+out
+.next
+
+# Arquivos temporários
+.tmp
+.temp
+.cache
+
+# Cobertura de testes
+coverage
+
+# Arquivos sensíveis
+*.pem
+*.key
+*.p12
+
+# Dependências locais
+.vscode
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

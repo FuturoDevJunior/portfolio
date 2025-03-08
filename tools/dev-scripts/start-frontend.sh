@@ -27,6 +27,22 @@ fi
 echo -e "${GREEN}Iniciando o frontend...${NC}"
 # Usar cd com || exit para evitar continuar se o diretório não existir
 cd "${PROJECT_ROOT}/frontend" || { echo -e "${RED}ERRO: Diretório frontend não encontrado${NC}"; exit 1; }
+
 # Limite a memória para evitar que seja finalizado pelo OS
-export NODE_OPTIONS="--max-old-space-size=2048"
+export NODE_OPTIONS="--max-old-space-size=4096"
+
+# Verificar se o node_modules existe e instalar dependências se necessário
+if [ ! -d "node_modules" ] || [ ! -f "node_modules/.package-lock.json" ]; then
+    echo -e "${YELLOW}Dependências não encontradas ou desatualizadas. Executando npm install...${NC}"
+    npm install
+fi
+
+# Verificar se vite está instalado
+if ! command -v ./node_modules/.bin/vite &> /dev/null; then
+    echo -e "${RED}Vite não encontrado. Reinstalando dependências...${NC}"
+    rm -rf node_modules
+    npm install
+fi
+
+echo -e "${GREEN}Executando o frontend em modo desenvolvimento...${NC}"
 npm run dev 

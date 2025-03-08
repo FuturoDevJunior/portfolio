@@ -334,6 +334,27 @@ router.get('/case-studies/:id', (req, res) => {
         res.status(500).json({ error: 'Falha ao recuperar case' });
     }
 });
+// Rota para metadados dinâmicos com suporte a multi-domínio
+router.get('/metadata', (req, res) => {
+    const host = req.headers.host || '';
+    const protocol = req.secure ? 'https' : 'http';
+    const baseUrl = `${protocol}://${host}`;
+    // Verificar se é .com ou .com.br
+    const domain = host.includes('.com.br') ? '.com.br' : '.com';
+    res.json({
+        title: 'DevFerreiraG - Desenvolvimento Web Enterprise',
+        description: 'Soluções profissionais de desenvolvimento web focadas em performance, segurança e escalabilidade.',
+        domain: host,
+        canonical: domain === '.com.br' ? 'https://www.devferreirag.com' : baseUrl,
+        social: {
+            linkedin: 'https://linkedin.com/in/DevFerreiraG',
+            github: 'https://github.com/DevFerreiraG'
+        },
+        api: {
+            baseUrl: domain === '.com.br' ? 'https://api.devferreirag.com.br' : 'https://api.devferreirag.com'
+        }
+    });
+});
 logger.info('🚀 Rotas da API configuradas');
 export { router as apiRouter };
 //# sourceMappingURL=api.js.map

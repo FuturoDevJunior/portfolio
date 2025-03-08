@@ -41,7 +41,14 @@ export const securityHeaders = (config = {}) => {
         // CORS simplificado (complementa o middleware cors)
         if (enableCORS) {
             const origin = req.headers.origin;
-            const allowedOrigins = process.env.CORS_ORIGINS?.split(',') || ['http://localhost:5173'];
+            const allowedOrigins = process.env.CORS_ORIGINS?.split(',') || [
+                'https://www.devferreirag.com',
+                'https://www.devferreirag.com.br',
+                'https://devferreirag.com',
+                'https://devferreirag.com.br',
+                'http://localhost:5173',
+                'http://localhost:5174'
+            ];
             if (origin && allowedOrigins.includes(origin)) {
                 res.setHeader('Access-Control-Allow-Origin', origin);
             }

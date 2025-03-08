@@ -32,6 +32,12 @@ export default defineConfig({
         changeOrigin: true,
         secure: false
       }
-    }
+    },
+    port: 5173,
+    strictPort: true,
+  },
+  preview: {
+    port: 5173,
+    strictPort: true,
   }
 });

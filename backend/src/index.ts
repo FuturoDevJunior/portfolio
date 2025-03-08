@@ -13,6 +13,7 @@ import { apiRouter } from './routes/api.js';
 import { errorHandler } from './middlewares/errorHandler.js';
 import { requestLogger } from './middlewares/requestLogger.js';
 import { securityHeaders, httpsRedirect, requestSanitizer } from './middlewares/securityMiddleware.js';
+import { domainRedirectMiddleware } from './middlewares/domainRedirect.js';
 import { configurePrerender } from './utils/prerender.js';
 import { setupSwagger } from './utils/swagger.js';
 import { logger } from './utils/logger.js';
@@ -64,6 +65,13 @@ app.use(cors({
     allowedHeaders: process.env.CORS_ALLOWED_HEADERS?.split(',') || ['Content-Type', 'Authorization', 'X-API-KEY', 'X-Analytics-ID', 'X-Marketing-Source'],
     credentials: true,
     maxAge: Number(process.env.CORS_MAX_AGE) || 86400
+}));
+
+// Redirecionamento de domínio (para garantir consistência entre .com e .com.br)
+app.use(domainRedirectMiddleware({
+    enabled: process.env.NODE_ENV === 'production',
+    primaryDomain: 'www.devferreirag.com',
+    excludePaths: ['/api', '/health', '/api-docs', '/sitemap.xml', '/robots.txt']
 }));
 
 // Configuração de segurança com Helmet
