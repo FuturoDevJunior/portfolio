@@ -1,40 +1,134 @@
-# dependencies
+# Dependências
 node_modules
 .pnp
 .pnp.js
+/.pnpm-store/
+yarn.lock
+package-lock.json
+pnpm-lock.yaml
+!pnpm-lock.yaml
 
-# testing
-coverage
+# Arquivos de build e saída
+/dist/
+/build/
+/out/
+/.next/
+/.nuxt/
+/output/
+/tmp/
+frontend/dist/
+backend/dist/
 
-# build
-dist
-build
-out
-.next
+# Testes
+/coverage/
+/.nyc_output/
+/cypress/videos/
+/cypress/screenshots/
+/__tests__/__snapshots__/
 
-# logs
+# Logs
+/logs/
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+health-check.log
 
-# environment variables
+# Variáveis de ambiente
 .env
 .env.local
+.env.development
 .env.development.local
+.env.test
 .env.test.local
+.env.production
 .env.production.local
+.env*.local
+**/.env
+**/.env.*
+!**/.env.example
 
-# cache
-.npm
+# Cache e arquivos temporários
+.npm/
 .eslintcache
+.stylelintcache
+.vite/
+.turbo/
+.cache/
+.swc/
+.temp/
+.rollup.cache/
+storybook-static/
+.vercel/
+.netlify/
+.webpack/
+tsconfig.tsbuildinfo
+*.tsbuildinfo
 
-# IDE
-.idea
-.vscode
-*.swp
-*.swo
+# Arquivos de IDE e editor
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/launch.json
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.sublime-*
+*.code-workspace
+.history/
+*.iml
+.project
+.classpath
+*.launch
+.settings/
 
-# OS
+# Arquivos do sistema operacional
 .DS_Store
 Thumbs.db
+desktop.ini
+*.lnk
+ehthumbs.db
+ehthumbs_vista.db
+$RECYCLE.BIN/
+._*
+*~
+*.swp
+*.swo
+.directory
+
+# Arquivos gerados automaticamente
+/generated/
+/auto-imports.d.ts
+/components.d.ts
+/locales/_build/
+/stats.html
+
+# PWA
+**/public/workbox-*.js
+**/public/sw.js
+**/public/fallback-*.js
+**/public/worker-*.js
+
+# Ferramentas específicas
+.firebase/
+.firebaserc
+firebase-debug.log
+/sitemap*.xml
+/robots.txt
+.serverless/
+.docusaurus/
+
+# Mobile
+.gradle/
+/android/build/
+/ios/build/
+/ios/Pods/
+/android/local.properties
+/ios/Podfile.lock
+*.keystore
+!debug.keystore

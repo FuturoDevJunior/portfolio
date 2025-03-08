@@ -17,4 +17,147 @@ body {
   :root {
     --purple-gradient: linear-gradient(145deg, #7e22ce, #d946ef);
   }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-black text-white;
+  }
+
+  /* Skip Link para acessibilidade por teclado - fica visível apenas quando recebe foco */
+  .skip-link {
+    @apply bg-purple-600 text-white p-3 fixed left-1/2 -translate-x-1/2 -top-20 z-50 transition-transform;
+    
+    &:focus {
+      @apply top-4 translate-y-0;
+    }
+  }
+
+  /* Melhorando visibilidade do foco para acessibilidade por teclado */
+  :focus-visible {
+    @apply outline-none ring-2 ring-purple-500 ring-offset-2 ring-offset-black;
+  }
+
+  /* Modos de acessibilidade */
+  /* Modo de alto contraste */
+  .high-contrast-mode {
+    /* Cores de fundo e texto com contraste aumentado */
+    --bg-color: #000000;
+    --text-color: #ffffff;
+    --heading-color: #ffff00;
+    --link-color: #55ffff;
+    --button-bg: #ffffff;
+    --button-text: #000000;
+    --focus-color: #ffff00;
+    --border-color: #ffffff;
+    
+    & body, & div, & section, & article, & aside, & nav {
+      background-color: var(--bg-color) !important;
+      color: var(--text-color) !important;
+    }
+    
+    & h1, & h2, & h3, & h4, & h5, & h6 {
+      color: var(--heading-color) !important;
+    }
+    
+    & a {
+      color: var(--link-color) !important;
+      text-decoration: underline !important;
+    }
+    
+    & button, & .button, & [role="button"] {
+      background-color: var(--button-bg) !important;
+      color: var(--button-text) !important;
+      border: 2px solid var(--border-color) !important;
+    }
+    
+    & input, & textarea, & select {
+      background-color: #000000 !important;
+      color: #ffffff !important;
+      border: 2px solid #ffffff !important;
+    }
+    
+    /* Imagens com filtro para melhorar contraste */
+    & img:not([alt="Logo"]) {
+      filter: contrast(1.5) !important;
+    }
+    
+    /* Remover sombras e efeitos que possam reduzir o contraste */
+    & * {
+      text-shadow: none !important;
+      box-shadow: none !important;
+    }
+
+    /* Melhorando visibilidade do foco */
+    & :focus-visible {
+      outline: 3px solid var(--focus-color) !important;
+      outline-offset: 2px !important;
+    }
+  }
+
+  /* Modo de leitura */
+  .reading-mode {
+    /* Cores suaves para leitura prolongada */
+    --bg-color: #f8f5f0;
+    --text-color: #333333;
+    --heading-color: #000000;
+    --link-color: #0056b3;
+    
+    & body, & div, & section, & article, & aside, & nav {
+      background-color: var(--bg-color) !important;
+      color: var(--text-color) !important;
+    }
+    
+    & h1, & h2, & h3, & h4, & h5, & h6 {
+      color: var(--heading-color) !important;
+    }
+    
+    & a {
+      color: var(--link-color) !important;
+    }
+    
+    /* Tamanho de fonte aumentado e espaçamento melhorado */
+    & p, & li, & blockquote, & td, & th {
+      font-size: 1.1rem !important;
+      line-height: 1.8 !important;
+      letter-spacing: 0.01em !important;
+    }
+    
+    & h1 {
+      font-size: 2.2rem !important;
+    }
+    
+    & h2 {
+      font-size: 1.8rem !important;
+    }
+    
+    & h3 {
+      font-size: 1.5rem !important;
+    }
+    
+    /* Aumentar margens e padding para melhor legibilidade */
+    & p, & ul, & ol {
+      margin-bottom: 1.5rem !important;
+    }
+    
+    & li {
+      margin-bottom: 0.75rem !important;
+    }
+    
+    /* Largura de linha limitada para facilitar leitura */
+    & .container, & main, & article, & section {
+      max-width: 800px !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      padding-left: 2rem !important;
+      padding-right: 2rem !important;
+    }
+    
+    /* Fonte mais legível para leitura prolongada */
+    & * {
+      font-family: Georgia, 'Times New Roman', serif !important;
+    }
+  }
 }
