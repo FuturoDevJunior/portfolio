@@ -1,8 +1,6 @@
-import { Router, Request, Response } from 'express';
+import { Router } from 'express';
 import { logger } from '../utils/logger.js';
-
 const router = Router();
-
 // Dados do portfolio (em produção, seriam recuperados de um banco de dados)
 const portfolioData = {
     services: [
@@ -154,7 +152,6 @@ const portfolioData = {
         }
     ]
 };
-
 /**
  * @swagger
  * /api/services:
@@ -177,27 +174,25 @@ const portfolioData = {
  *             schema:
  *               type: array
  */
-router.get('/services', (req: Request, res: Response) => {
+router.get('/services', (req, res) => {
     try {
         // Validação adequada do tipo de entrada
         const langParam = req.query.lang;
         const lang = (typeof langParam === 'string' ? langParam : 'pt').toLowerCase();
-
         // Formatar a resposta no idioma solicitado
         const services = portfolioData.services.map(service => ({
             id: service.id,
-            title: service.title[lang as keyof typeof service.title] || service.title.pt,
-            description: service.description[lang as keyof typeof service.description] || service.description.pt,
+            title: service.title[lang] || service.title.pt,
+            description: service.description[lang] || service.description.pt,
             skills: service.skills
         }));
-
         res.json(services);
-    } catch (error) {
+    }
+    catch (error) {
         logger.error('Erro ao obter serviços:', error);
         res.status(500).json({ error: 'Falha ao recuperar serviços' });
     }
 });
-
 /**
  * @swagger
  * /api/expertise:
@@ -220,25 +215,23 @@ router.get('/services', (req: Request, res: Response) => {
  *             schema:
  *               type: array
  */
-router.get('/expertise', (req: Request, res: Response) => {
+router.get('/expertise', (req, res) => {
     try {
-        const lang = ((req.query.lang || 'pt') as string).toLowerCase();
-
+        const lang = (req.query.lang || 'pt').toLowerCase();
         // Formatar a resposta no idioma solicitado
         const expertise = portfolioData.expertise.map(exp => ({
             id: exp.id,
-            title: exp.title[lang as keyof typeof exp.title] || exp.title.pt,
-            description: exp.description[lang as keyof typeof exp.description] || exp.description.pt,
+            title: exp.title[lang] || exp.title.pt,
+            description: exp.description[lang] || exp.description.pt,
             technologies: exp.technologies
         }));
-
         res.json(expertise);
-    } catch (error) {
+    }
+    catch (error) {
         logger.error('Erro ao obter expertise:', error);
         res.status(500).json({ error: 'Falha ao recuperar áreas de expertise' });
     }
 });
-
 /**
  * @swagger
  * /api/case-studies:
@@ -261,30 +254,28 @@ router.get('/expertise', (req: Request, res: Response) => {
  *             schema:
  *               type: array
  */
-router.get('/case-studies', (req: Request, res: Response) => {
+router.get('/case-studies', (req, res) => {
     try {
-        const lang = ((req.query.lang || 'pt') as string).toLowerCase();
-
+        const lang = (req.query.lang || 'pt').toLowerCase();
         // Formatar a resposta no idioma solicitado
         const caseStudies = portfolioData.caseStudies.map(cs => ({
             id: cs.id,
-            title: cs.title[lang as keyof typeof cs.title] || cs.title.pt,
-            description: cs.description[lang as keyof typeof cs.description] || cs.description.pt,
-            results: cs.results[lang as keyof typeof cs.results] || cs.results.pt,
+            title: cs.title[lang] || cs.title.pt,
+            description: cs.description[lang] || cs.description.pt,
+            results: cs.results[lang] || cs.results.pt,
             technologies: cs.technologies,
             metrics: cs.metrics.map(metric => ({
-                label: metric.label[lang as keyof typeof metric.label] || metric.label.pt,
+                label: metric.label[lang] || metric.label.pt,
                 value: metric.value
             }))
         }));
-
         res.json(caseStudies);
-    } catch (error) {
+    }
+    catch (error) {
         logger.error('Erro ao obter cases de sucesso:', error);
         res.status(500).json({ error: 'Falha ao recuperar cases de sucesso' });
     }
 });
-
 /**
  * @swagger
  * /api/case-studies/{id}:
@@ -315,38 +306,34 @@ router.get('/case-studies', (req: Request, res: Response) => {
  *       404:
  *         description: Case não encontrado
  */
-router.get('/case-studies/:id', (req: Request, res: Response) => {
+router.get('/case-studies/:id', (req, res) => {
     try {
         const { id } = req.params;
-        const lang = ((req.query.lang || 'pt') as string).toLowerCase();
-
+        const lang = (req.query.lang || 'pt').toLowerCase();
         // Buscar o case específico
         const caseStudy = portfolioData.caseStudies.find(cs => cs.id === id);
-
         if (!caseStudy) {
             return res.status(404).json({ error: 'Case não encontrado' });
         }
-
         // Formatar a resposta no idioma solicitado
         const formattedCaseStudy = {
             id: caseStudy.id,
-            title: caseStudy.title[lang as keyof typeof caseStudy.title] || caseStudy.title.pt,
-            description: caseStudy.description[lang as keyof typeof caseStudy.description] || caseStudy.description.pt,
-            results: caseStudy.results[lang as keyof typeof caseStudy.results] || caseStudy.results.pt,
+            title: caseStudy.title[lang] || caseStudy.title.pt,
+            description: caseStudy.description[lang] || caseStudy.description.pt,
+            results: caseStudy.results[lang] || caseStudy.results.pt,
             technologies: caseStudy.technologies,
             metrics: caseStudy.metrics.map(metric => ({
-                label: metric.label[lang as keyof typeof metric.label] || metric.label.pt,
+                label: metric.label[lang] || metric.label.pt,
                 value: metric.value
             }))
         };
-
         res.json(formattedCaseStudy);
-    } catch (error) {
+    }
+    catch (error) {
         logger.error('Erro ao obter case específico:', error);
         res.status(500).json({ error: 'Falha ao recuperar case' });
     }
 });
-
 logger.info('🚀 Rotas da API configuradas');
-
-export { router as apiRouter }; 
+export { router as apiRouter };
+//# sourceMappingURL=api.js.map

@@ -1,44 +1,17 @@
-import { Router, Request, Response } from 'express';
+import { Router } from 'express';
 import NodeCache from 'node-cache';
 import { v4 as uuidv4 } from 'uuid';
 import { logger, logMarketingEvent } from '../utils/logger.js';
-
 const router = Router();
-
 // Cache para armazenar as métricas de analytics em memória
 const metricsCache = new NodeCache({ stdTTL: 3600, checkperiod: 120 });
-
 // Estatísticas anônimas em memória
-const pageViews: Record<string, number> = {};
-const uniqueVisitors: Set<string> = new Set();
-const referrers: Record<string, number> = {};
-const deviceTypes: Record<string, number> = {};
-
-interface CountryCount {
-    [key: string]: number;
-}
-
-const countries: CountryCount = {};
-const languages: Record<string, number> = {};
-
-// Interfaces para os eventos
-interface PageViewData {
-    page?: string;
-    sessionId?: string;
-    referrer?: string;
-    language?: string;
-    title?: string;
-    [key: string]: string | number | boolean | object | undefined;
-}
-
-// Usaremos a interface para o processamento em lote
-interface AnalyticsEvent {
-    eventType: string;
-    page?: string;
-    sessionId?: string;
-    [key: string]: string | number | boolean | object | undefined;
-}
-
+const pageViews = {};
+const uniqueVisitors = new Set();
+const referrers = {};
+const deviceTypes = {};
+const countries = {};
+const languages = {};
 /**
  * @swagger
  * /analytics/pageview:
@@ -69,37 +42,30 @@ interface AnalyticsEvent {
  *       200:
  *         description: Visualização registrada com sucesso
  */
-router.post('/pageview', (req: Request, res: Response) => {
+router.post('/pageview', (req, res) => {
     try {
         const { page, sessionId, referrer, language } = req.body;
         const userAgent = req.headers['user-agent'] || 'unknown';
         const country = req.headers['cf-ipcountry'] || (req.ip ? req.ip.split(':').pop() : 'unknown') || 'unknown';
-
         // Gera um ID de sessão se não tiver um
         const visitorId = sessionId || uuidv4();
-
         // Incrementa contadores
         pageViews[page] = (pageViews[page] || 0) + 1;
         uniqueVisitors.add(visitorId);
-
         if (referrer) {
             referrers[referrer] = (referrers[referrer] || 0) + 1;
         }
-
         // Detecta tipo de dispositivo simplificado
         const isMobile = /mobile|android|iphone|ipad|ipod/i.test(userAgent);
         const deviceType = isMobile ? 'mobile' : 'desktop';
         deviceTypes[deviceType] = (deviceTypes[deviceType] || 0) + 1;
-
         // Registra o país 
         const countryStr = typeof country === 'string' ? country : String(country);
         countries[countryStr] = (countries[countryStr] || 0) + 1;
-
         // Registra idioma
         if (language) {
             languages[language] = (languages[language] || 0) + 1;
         }
-
         // Registra evento em log 
         logMarketingEvent('pageview', page, {
             visitorId,
@@ -108,17 +74,16 @@ router.post('/pageview', (req: Request, res: Response) => {
             country,
             language
         });
-
         res.status(200).json({
             success: true,
             visitorId
         });
-    } catch (error) {
+    }
+    catch (error) {
         console.error('Erro ao registrar pageview:', error);
         res.status(500).json({ error: 'Falha ao registrar pageview' });
     }
 });
-
 /**
  * @swagger
  * /analytics/event:
@@ -149,26 +114,24 @@ router.post('/pageview', (req: Request, res: Response) => {
  *       200:
  *         description: Evento registrado com sucesso
  */
-router.post('/event', (req: Request, res: Response) => {
+router.post('/event', (req, res) => {
     try {
         const { eventType, elementId, sessionId, page } = req.body;
-
         // Registra evento em log
         logMarketingEvent(eventType, page, {
             elementId,
             sessionId
         });
-
         res.status(200).json({
             success: true,
             event: eventType
         });
-    } catch (error) {
+    }
+    catch (error) {
         console.error('Erro ao registrar evento:', error);
         res.status(500).json({ error: 'Falha ao registrar evento' });
     }
 });
-
 /**
  * @swagger
  * /analytics/metrics:
@@ -188,14 +151,13 @@ router.post('/event', (req: Request, res: Response) => {
  *       401:
  *         description: Não autorizado
  */
-router.get('/metrics', (req: Request, res: Response) => {
+router.get('/metrics', (req, res) => {
     try {
         // Verificar API key para proteção
         const apiKey = req.headers['x-api-key'];
         if (apiKey !== process.env.ADMIN_API_KEY) {
             return res.status(401).json({ error: 'Não autorizado' });
         }
-
         // Obter as métricas
         const metrics = {
             totalPageViews: Object.values(pageViews).reduce((sum, views) => sum + views, 0),
@@ -211,17 +173,15 @@ router.get('/metrics', (req: Request, res: Response) => {
             languages,
             timestamp: new Date().toISOString()
         };
-
         // Atualizar o cache
         metricsCache.set('siteMetrics', metrics);
-
         res.json(metrics);
-    } catch (error) {
+    }
+    catch (error) {
         console.error('Erro ao obter métricas:', error);
         res.status(500).json({ error: 'Falha ao obter métricas' });
     }
 });
-
 /**
  * @swagger
  * /analytics/batch:
@@ -252,56 +212,48 @@ router.get('/metrics', (req: Request, res: Response) => {
  *       200:
  *         description: Eventos processados com sucesso
  */
-router.post('/batch', async (req: Request, res: Response) => {
+router.post('/batch', async (req, res) => {
     try {
         const { events } = req.body;
-
         if (!Array.isArray(events) || events.length === 0) {
             return res.status(400).json({
                 success: false,
                 error: 'Formato inválido: events deve ser um array não vazio'
             });
         }
-
         // Processa cada evento do lote
-        const results = await Promise.all(events.map(async (event: AnalyticsEvent) => {
+        const results = await Promise.all(events.map(async (event) => {
             const { eventType, ...eventData } = event;
-
             try {
-                let userAgent: string, country: string | unknown, deviceType: string, countryStr: string;
-                let isMobile: boolean;
-                let pageData: PageViewData;
-
+                let userAgent, country, deviceType, countryStr;
+                let isMobile;
+                let pageData;
                 switch (eventType) {
                     case 'pageview':
                         // Registra visualização de página
-                        pageData = eventData as PageViewData;
+                        pageData = eventData;
                         userAgent = req.headers['user-agent'] || 'unknown';
                         country = req.headers['cf-ipcountry'] ||
                             (req.ip ? req.ip.split(':').pop() : 'unknown') || 'unknown';
-
                         // Incrementa contadores
-                        if (pageData.page) pageViews[pageData.page] = (pageViews[pageData.page] || 0) + 1;
-                        if (pageData.sessionId) uniqueVisitors.add(pageData.sessionId);
-
+                        if (pageData.page)
+                            pageViews[pageData.page] = (pageViews[pageData.page] || 0) + 1;
+                        if (pageData.sessionId)
+                            uniqueVisitors.add(pageData.sessionId);
                         if (pageData.referrer) {
                             referrers[pageData.referrer] = (referrers[pageData.referrer] || 0) + 1;
                         }
-
                         // Detecta tipo de dispositivo
                         isMobile = /mobile|android|iphone|ipad|ipod/i.test(userAgent);
                         deviceType = isMobile ? 'mobile' : 'desktop';
                         deviceTypes[deviceType] = (deviceTypes[deviceType] || 0) + 1;
-
                         // Registra o país
                         countryStr = typeof country === 'string' ? country : String(country);
                         countries[countryStr] = (countries[countryStr] || 0) + 1;
-
                         // Registra idioma
                         if (pageData.language) {
                             languages[pageData.language] = (languages[pageData.language] || 0) + 1;
                         }
-
                         logMarketingEvent('pageview', pageData.page || 'unknown-page', {
                             visitorId: pageData.sessionId,
                             referrer: pageData.referrer,
@@ -309,46 +261,41 @@ router.post('/batch', async (req: Request, res: Response) => {
                             country,
                             language: pageData.language
                         });
-
                         return { eventType, success: true };
-
                     case 'click':
                     case 'event':
                         // Registra evento genérico ou clique
-                        logMarketingEvent(eventType, (eventData as PageViewData).page || 'unknown', {
+                        logMarketingEvent(eventType, eventData.page || 'unknown', {
                             ...eventData,
                             batchProcessed: true
                         });
-
                         return { eventType, success: true };
-
                     default:
                         // Eventos não reconhecidos são registrados como genéricos
                         logMarketingEvent('unknown_event', 'batch_processing', {
                             eventType,
                             ...eventData
                         });
-
                         return { eventType, success: true, message: 'Tipo de evento não reconhecido' };
                 }
-            } catch (error) {
+            }
+            catch (error) {
                 logger.error(`Erro ao processar evento ${eventType} em lote:`, error);
                 return { eventType, success: false, error: 'Falha ao processar evento' };
             }
         }));
-
         res.status(200).json({
             success: true,
             processed: results.filter(r => r.success).length,
             failed: results.filter(r => !r.success).length,
             timestamp: new Date().toISOString()
         });
-    } catch (error) {
+    }
+    catch (error) {
         logger.error('Erro ao processar lote de eventos:', error);
         res.status(500).json({ success: false, error: 'Falha ao processar lote de eventos' });
     }
 });
-
 logger.info('📊 Rotas de analytics configuradas');
-
-export { router as analyticsRouter }; 
+export { router as analyticsRouter };
+//# sourceMappingURL=analytics.js.map

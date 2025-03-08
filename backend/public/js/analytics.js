@@ -1,7 +1,7 @@
 /**
  * DevFerreiraG Analytics
  * Script para coleta de dados de analytics e marketing
- * v1.0.0
+ * v1.0.1
  */
 (function() {
   // Configuração
@@ -10,12 +10,15 @@
     marketingEndpoint: '/marketing',
     sessionIdKey: 'dvfg_session_id',
     sessionDuration: 30 * 60 * 1000, // 30 minutos
-    trackingInterval: 15 * 1000, // 15 segundos
+    trackingInterval: 60 * 1000, // Aumentado para 60 segundos (era 15 segundos)
     sendBeacons: true,
     trackClicks: true,
     trackPageViews: true,
     trackUTM: true,
-    debug: false
+    debug: false,
+    consentRequired: true, // Nova opção para requisitar consentimento
+    maxEventsBeforeSend: 5, // Novo - Acumular eventos até este número antes de enviar
+    debounceTime: 500 // Novo - Tempo de debounce para eventos frequentes
   };
 
   // Estado
@@ -25,6 +28,10 @@
   let referrer = document.referrer;
   let language = navigator.language || 'pt-BR';
   let utmParams = {};
+  let hasConsent = false; // Novo estado para controle de consentimento
+  let eventQueue = []; // Novo - Fila para acumular eventos
+  let eventsTimer = null; // Novo - Timer para envio de eventos em lote
+  let clickTimeout = null; // Novo - Para implementar debounce nos cliques
 
   // Utilitários
   const log = (message, data) => {
@@ -41,11 +48,33 @@
     });
   };
 
+  // Novo - Função para sanitizar dados antes do envio
+  const sanitizeData = (data) => {
+    // Função para sanitizar campos específicos
+    const sanitized = {...data};
+    
+    // Limitando comprimento de strings
+    for (const key in sanitized) {
+      if (typeof sanitized[key] === 'string') {
+        sanitized[key] = sanitized[key].substring(0, 500);
+      }
+    }
+    
+    // Remover dados potencialmente sensíveis
+    if (sanitized.userAgent) {
+      // Sanitiza o user agent para conter apenas informações essenciais
+      sanitized.userAgent = sanitized.userAgent.replace(/([0-9]+\.[0-9]+\.[0-9]+\.[0-9]+)/g, '[IP_REMOVED]');
+    }
+    
+    return sanitized;
+  };
+
   const getPlatformInfo = () => {
     const isMobile = /Mobile|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
     return {
       platform: isMobile ? 'mobile' : 'desktop',
-      userAgent: navigator.userAgent,
+      // Capturar apenas informações de plataforma, não o user agent completo
+      platformType: navigator.platform,
       viewportWidth: window.innerWidth,
       viewportHeight: window.innerHeight,
       language: navigator.language
@@ -71,8 +100,120 @@
     };
   };
 
+  // Novo - Sistema de consentimento
+  const checkConsent = () => {
+    if (!config.consentRequired) {
+      hasConsent = true;
+      return true;
+    }
+    
+    hasConsent = localStorage.getItem('dvfg_analytics_consent') === 'true';
+    
+    if (!hasConsent) {
+      showConsentBanner();
+    }
+    
+    return hasConsent;
+  };
+  
+  const showConsentBanner = () => {
+    // Verificar se o banner já existe
+    if (document.getElementById('analytics-consent-banner')) return;
+    
+    const banner = document.createElement('div');
+    banner.id = 'analytics-consent-banner';
+    banner.style.cssText = 'position: fixed; bottom: 0; left: 0; right: 0; background: #f8f9fa; padding: 15px; box-shadow: 0 -2px 10px rgba(0,0,0,0.1); z-index: 9999; font-family: sans-serif; text-align: center;';
+    
+    banner.innerHTML = `
+      <p style="margin: 0 0 10px">Utilizamos cookies e técnicas similares para melhorar sua experiência. 
+      Ao continuar navegando, você concorda com nossa política de privacidade.</p>
+      <div>
+        <button id="consent-accept" style="background: #007bff; color: white; border: none; padding: 8px 16px; margin-right: 10px; cursor: pointer; border-radius: 4px;">Aceitar</button>
+        <button id="consent-reject" style="background: #f8f9fa; border: 1px solid #ddd; padding: 8px 16px; cursor: pointer; border-radius: 4px;">Rejeitar</button>
+      </div>
+    `;
+    
+    document.body.appendChild(banner);
+    
+    document.getElementById('consent-accept').addEventListener('click', () => {
+      localStorage.setItem('dvfg_analytics_consent', 'true');
+      hasConsent = true;
+      banner.remove();
+      init(); // Iniciar tracking após o consentimento
+    });
+    
+    document.getElementById('consent-reject').addEventListener('click', () => {
+      localStorage.setItem('dvfg_analytics_consent', 'false');
+      hasConsent = false;
+      banner.remove();
+    });
+  };
+
+  // Novo - Envio em lote de eventos
+  const queueEvent = (endpoint, payload) => {
+    if (!hasConsent) return;
+    
+    eventQueue.push({ endpoint, payload });
+    
+    if (eventQueue.length >= config.maxEventsBeforeSend) {
+      sendQueuedEvents();
+    } else if (!eventsTimer) {
+      // Configurar um timer para enviar eventos após um tempo, mesmo que não atinja o limite
+      eventsTimer = setTimeout(sendQueuedEvents, 10000);
+    }
+  };
+  
+  const sendQueuedEvents = () => {
+    if (eventQueue.length === 0) return;
+    
+    if (eventsTimer) {
+      clearTimeout(eventsTimer);
+      eventsTimer = null;
+    }
+    
+    // Agrupar eventos por endpoint
+    const eventsByEndpoint = {};
+    
+    eventQueue.forEach(event => {
+      if (!eventsByEndpoint[event.endpoint]) {
+        eventsByEndpoint[event.endpoint] = [];
+      }
+      eventsByEndpoint[event.endpoint].push(event.payload);
+    });
+    
+    // Enviar eventos em lote para cada endpoint
+    for (const endpoint in eventsByEndpoint) {
+      fetch(`${endpoint}/batch`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          events: eventsByEndpoint[endpoint],
+          timestamp: new Date().toISOString()
+        }),
+        // Remover credentials para melhorar privacidade
+        // credentials: 'include'
+      })
+      .then(response => {
+        if (response.ok) {
+          log('Lote de eventos enviado', { endpoint, count: eventsByEndpoint[endpoint].length });
+        }
+      })
+      .catch(error => {
+        log('Erro ao enviar lote de eventos', error);
+      });
+    }
+    
+    // Limpar a fila após o envio
+    eventQueue = [];
+  };
+
   // Inicializar
   const init = () => {
+    if (config.consentRequired && !checkConsent()) {
+      log('Aguardando consentimento do usuário');
+      return;
+    }
+    
     // Gerar ou recuperar ID de sessão
     sessionId = localStorage.getItem(config.sessionIdKey);
     if (!sessionId) {
@@ -103,16 +244,22 @@
     });
     
     // Monitorar atividade
-    setInterval(trackActivity, config.trackingInterval);
+    const activityInterval = setInterval(trackActivity, config.trackingInterval);
     
     // Enviar dados ao sair
     window.addEventListener('beforeunload', () => {
-      if (config.sendBeacons) {
+      // Limpar intervalos para evitar memory leaks
+      clearInterval(activityInterval);
+      
+      if (config.sendBeacons && hasConsent) {
         sendBeacon('pageExit', {
           timeOnPage: Date.now() - lastActivity,
           exitUrl: document.location.href
         });
       }
+      
+      // Enviar quaisquer eventos pendentes
+      sendQueuedEvents();
     });
     
     log('Inicializado', { sessionId });
@@ -139,7 +286,9 @@
 
   // Rastrear visualização de página
   const trackPageView = () => {
-    const data = {
+    if (!hasConsent) return;
+    
+    const data = sanitizeData({
       page: window.location.pathname,
       title: document.title,
       sessionId,
@@ -148,48 +297,28 @@
       ...getPlatformInfo(),
       performance: getPerformanceData(),
       timestamp: new Date().toISOString()
-    };
+    });
     
-    fetch(`${config.endpoint}/pageview`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(data),
-      credentials: 'include'
-    })
-    .then(response => {
-      if (response.ok) {
-        log('Visualização de página registrada', { page: data.page });
-      }
-    })
-    .catch(error => {
-      log('Erro ao registrar visualização', error);
+    queueEvent(config.endpoint, {
+      eventType: 'pageview',
+      ...data
     });
   };
 
   // Rastrear UTM
   const trackUTM = (params) => {
-    fetch(`${config.marketingEndpoint}/track`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        sessionId,
-        ...params
-      }),
-      credentials: 'include'
-    })
-    .then(response => {
-      if (response.ok) {
-        log('UTM registrado', params);
-      }
-    })
-    .catch(error => {
-      log('Erro ao registrar UTM', error);
+    if (!hasConsent) return;
+    
+    queueEvent(config.marketingEndpoint, {
+      eventType: 'utm',
+      sessionId,
+      ...sanitizeData(params)
     });
   };
 
   // Rastrear atividade
   const trackActivity = () => {
-    if (!isActive) return;
+    if (!isActive || !hasConsent) return;
     
     const now = Date.now();
     const timeSinceLastActivity = now - lastActivity;
@@ -204,10 +333,25 @@
     lastActivity = now;
   };
 
-  // Rastrear cliques
+  // Rastrear cliques com debounce
   const handleClick = (event) => {
+    if (!hasConsent) return;
+    
+    // Implementação de debounce para evitar múltiplos registros em cliques rápidos
+    if (clickTimeout) {
+      clearTimeout(clickTimeout);
+    }
+    
+    clickTimeout = setTimeout(() => {
+      processClick(event);
+    }, config.debounceTime);
+  };
+  
+  const processClick = (event) => {
     // Não rastrear cliques em elementos sensíveis
-    if (event.target.type === 'password' || event.target.classList.contains('no-track')) {
+    if (event.target.type === 'password' || 
+        event.target.classList.contains('no-track') || 
+        event.target.closest('.no-track')) {
       return;
     }
 
@@ -218,7 +362,7 @@
       elementId: target.id || null,
       elementText: target.innerText?.trim().substring(0, 50) || null,
       elementClass: target.className || null,
-      pageUrl: window.location.href,
+      pageUrl: window.location.pathname,
       timestamp: new Date().toISOString()
     };
 
@@ -229,34 +373,21 @@
       data.linkTarget = target.target;
     }
 
-    fetch(`${config.endpoint}/event`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        eventType: 'click',
-        sessionId,
-        page: window.location.pathname,
-        ...data
-      }),
-      credentials: 'include'
-    })
-    .then(response => {
-      if (response.ok) {
-        log('Clique registrado', data);
-      }
-    })
-    .catch(error => {
-      log('Erro ao registrar clique', error);
+    queueEvent(config.endpoint, {
+      eventType: 'click',
+      ...sanitizeData(data)
     });
   };
 
   // Enviar beacon (para saída de página)
   const sendBeacon = (eventType, data) => {
+    if (!hasConsent) return;
+    
     const payload = JSON.stringify({
       eventType,
       sessionId,
       page: window.location.pathname,
-      ...data
+      ...sanitizeData(data)
     });
     
     if (navigator.sendBeacon) {
@@ -276,67 +407,39 @@
   // API pública
   window.DevFerreiraAnalytics = {
     trackEvent: (eventType, data = {}) => {
-      fetch(`${config.endpoint}/event`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          eventType,
-          sessionId,
-          page: window.location.pathname,
-          ...data
-        }),
-        credentials: 'include'
-      })
-      .then(response => {
-        if (response.ok) {
-          log('Evento registrado', { eventType, ...data });
-        }
-      })
-      .catch(error => {
-        log('Erro ao registrar evento', error);
+      if (!hasConsent) return;
+      
+      queueEvent(config.endpoint, {
+        eventType,
+        sessionId,
+        page: window.location.pathname,
+        ...sanitizeData(data)
       });
     },
     
     trackConversion: (type, value = null) => {
-      fetch(`${config.marketingEndpoint}/conversion`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          sessionId,
-          type,
-          value
-        }),
-        credentials: 'include'
-      })
-      .then(response => {
-        if (response.ok) {
-          log('Conversão registrada', { type, value });
-        }
-      })
-      .catch(error => {
-        log('Erro ao registrar conversão', error);
+      if (!hasConsent) return;
+      
+      queueEvent(config.marketingEndpoint, {
+        eventType: 'conversion',
+        sessionId,
+        type,
+        value
       });
     },
     
     trackLead: (email, name = null, source = null) => {
-      fetch(`${config.marketingEndpoint}/lead`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          sessionId,
-          email,
-          name,
-          source: source || 'website'
-        }),
-        credentials: 'include'
-      })
-      .then(response => {
-        if (response.ok) {
-          log('Lead registrado', { email, name, source });
-        }
-      })
-      .catch(error => {
-        log('Erro ao registrar lead', error);
+      if (!hasConsent) return;
+      
+      // Anonimizar e-mail para maior privacidade
+      const anonymizedEmail = email.split('@')[0].substring(0, 2) + '***@' + email.split('@')[1];
+      
+      queueEvent(config.marketingEndpoint, {
+        eventType: 'lead',
+        sessionId,
+        email: anonymizedEmail,
+        name: name ? name.split(' ')[0] + ' ' + (name.split(' ')[1] ? name.split(' ')[1][0] + '.' : '') : null,
+        source: source || 'website'
       });
     },
     
@@ -345,7 +448,19 @@
       log('Modo de depuração', config.debug ? 'ativado' : 'desativado');
     },
     
-    getSessionId: () => sessionId
+    getSessionId: () => sessionId,
+    
+    // Nova função para gerenciar o consentimento
+    setConsent: (value) => {
+      hasConsent = !!value;
+      localStorage.setItem('dvfg_analytics_consent', hasConsent ? 'true' : 'false');
+      
+      if (hasConsent && !sessionId) {
+        init();
+      }
+      
+      return hasConsent;
+    }
   };
 
   // Inicializar quando o documento estiver pronto

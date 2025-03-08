@@ -17,8 +17,15 @@
     "check-types": "tsc --noEmit",
     "format": "prettier --write \"src/**/*.ts\"",
     "prestart": "npm run build",
-    "start:prod": "NODE_ENV=production node dist/index.js",
-    "setup": "npm install && npm run build && npm run postinstall"
+    "start:prod": "NODE_ENV=production pm2 start dist/index.js --name devferreirag-api",
+    "stop:prod": "pm2 stop devferreirag-api",
+    "restart:prod": "pm2 restart devferreirag-api",
+    "logs:prod": "pm2 logs devferreirag-api",
+    "status:prod": "pm2 status",
+    "setup": "npm install && npm run build && npm run postinstall",
+    "test:api": "ts-node src/test-scripts/analytics-test.ts",
+    "check:prod": "NODE_ENV=production ts-node src/test-scripts/production-deploy-check.ts",
+    "log:rotate": "src/scripts/log-rotate.sh"
   },
   "keywords": [
     "portfolio",
