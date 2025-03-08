@@ -1,0 +1,73 @@
+# robots.txt para DevFerreiraG
+# Versão 1.0.0
+
+# Configurações para todos os crawlers
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /api/analytics/
+Disallow: /api/marketing/
+Disallow: /api/metrics
+Disallow: /api/stats
+Disallow: /health
+Disallow: /*?source=
+Disallow: /*?utm_
+Disallow: /*.json$
+Disallow: /*.js.map$
+
+# Permitir acesso ao sitemap
+Allow: /sitemap.xml
+Allow: /sitemap.txt
+Allow: /seo/
+Allow: /js/seo-enhancer.js
+
+# Configurações específicas para o Googlebot
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+# Configurações para Bingbot
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 2
+
+# Configurações para YandexBot
+User-agent: YandexBot
+Allow: /
+Crawl-delay: 3
+
+# Configurações para Baidu
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 5
+
+# Configurações para Bots de Mídia Social
+User-agent: Twitterbot
+Allow: /
+Disallow: /admin/
+
+User-agent: facebookexternalhit
+Allow: /
+Disallow: /admin/
+
+User-agent: LinkedInBot
+Allow: /
+Disallow: /admin/
+
+# Configurações para bots de análise de SEO
+User-agent: AhrefsBot
+Disallow: /api/
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Disallow: /api/
+Crawl-delay: 10
+
+User-agent: MJ12bot
+Disallow: /
+
+# Localização do sitemap
+Sitemap: https://devferreirag.com/sitemap.xml
+
+# Host canônico
+Host: https://devferreirag.com 
