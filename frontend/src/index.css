@@ -5,6 +5,7 @@
 body {
   background-color: black;
   color: white;
+  overflow-x: hidden; /* Prevenir scroll horizontal */
 }
 
 @layer utilities {
@@ -26,6 +27,28 @@ body {
     @apply bg-black text-white;
   }
 
+  /* Melhorias de responsividade para textos */
+  h1 {
+    @apply text-4xl sm:text-5xl md:text-6xl lg:text-7xl;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  h2 {
+    @apply text-2xl sm:text-3xl md:text-4xl;
+    line-height: 1.3;
+  }
+
+  p {
+    @apply text-base sm:text-lg;
+    line-height: 1.6;
+  }
+
+  /* Garantir margem adequada entre elementos */
+  section {
+    @apply py-12 md:py-20;
+  }
+
   /* Skip Link para acessibilidade por teclado - fica visível apenas quando recebe foco */
   .skip-link {
     @apply bg-purple-600 text-white p-3 fixed left-1/2 -translate-x-1/2 -top-20 z-50 transition-transform;
@@ -42,7 +65,7 @@ body {
 
   /* Modos de acessibilidade */
   /* Modo de alto contraste */
-  .high-contrast-mode {
+  .high-contrast-mode, .high-contrast {
     /* Cores de fundo e texto com contraste aumentado */
     --bg-color: #000000;
     --text-color: #ffffff;
@@ -159,5 +182,84 @@ body {
     & * {
       font-family: Georgia, 'Times New Roman', serif !important;
     }
+  }
+  
+  /* Classes utilitárias para melhorar responsividade */
+  .responsive-grid {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6;
+  }
+  
+  .responsive-flex {
+    @apply flex flex-col sm:flex-row;
+  }
+  
+  /* Ajuste para dispositivos móveis */
+  @media (max-width: 640px) {
+    .container {
+      @apply px-4;
+    }
+    
+    section {
+      @apply py-10;
+    }
+    
+    .hero-title {
+      font-size: 2rem !important;
+      line-height: 1.4;
+      margin-bottom: 1rem;
+      word-break: break-word;
+      hyphens: auto;
+      padding-bottom: 0.1em;
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
+    }
+    
+    .hero-subtitle {
+      font-size: 0.95rem !important;
+      line-height: 1.5;
+      margin-bottom: 1.5rem;
+      /* Garantir que não há sobreposição */
+      display: block;
+      max-width: 100%;
+      word-break: break-word;
+      hyphens: auto;
+    }
+    
+    /* Ajustar botões para melhor visualização em mobile */
+    [aria-labelledby="cta-heading"] {
+      width: 100%;
+      gap: 0.75rem;
+    }
+    
+    /* Melhorar espaçamento em mobile */
+    .pt-32 {
+      padding-top: 5rem !important;
+    }
+    
+    .pb-20 {
+      padding-bottom: 3rem !important;
+    }
+  }
+  
+  /* Tamanhos de tela intermediários */
+  @media (min-width: 641px) and (max-width: 768px) {
+    .hero-title {
+      font-size: 3rem !important;
+      line-height: 1.3;
+      padding-bottom: 0.1em;
+    }
+    
+    .hero-subtitle {
+      font-size: 1.1rem !important;
+    }
+  }
+
+  /* Correção para gradientes de texto e clipping */
+  .text-transparent.bg-clip-text {
+    -webkit-background-clip: text;
+    background-clip: text;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+    display: inline-block;
   }
 }

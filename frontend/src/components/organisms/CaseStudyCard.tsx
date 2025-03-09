@@ -1,7 +1,12 @@
 import React from 'react';
-import { ArrowRight, CheckCircle2 } from 'lucide-react';
-import { TechStackBadge } from './TechStackBadge';
-import { useLanguage } from '../hooks/useLanguage';
+
+import {
+  ArrowRight,
+  CheckCircle2,
+} from 'lucide-react';
+
+import { useLanguage } from '../../hooks/useLanguage';
+import { TechStackBadge } from '../atoms/TechStackBadge';
 
 interface Metric {
   label: string;
@@ -16,6 +21,14 @@ interface CaseStudyCardProps {
   metrics: Metric[];
   learnMoreUrl?: string;
 }
+
+// Helper para garantir que traduções sejam tratadas como string
+const asString = (value: unknown): string => {
+  if (Array.isArray(value)) {
+    return value.join(' ');
+  }
+  return String(value);
+};
 
 export function CaseStudyCard({
   title,
@@ -42,13 +55,13 @@ export function CaseStudyCard({
         <p className="text-gray-400">{results}</p>
       </div>
 
-      <div className="flex flex-wrap gap-2 mb-6" role="list" aria-label={t('caseStudy.technologies')}>
+      <div className="flex flex-wrap gap-2 mb-6" role="list" aria-label={asString(t('caseStudy.technologies'))}>
         {technologies.map((tech) => (
           <TechStackBadge key={tech} name={tech} ecosystem={title} />
         ))}
       </div>
 
-      <div className="grid grid-cols-2 gap-4" role="list" aria-label={t('caseStudy.metrics')}>
+      <div className="grid grid-cols-2 gap-4" role="list" aria-label={asString(t('caseStudy.metrics'))}>
         {metrics.map((metric, index) => (
           <div
             key={index}

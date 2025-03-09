@@ -1,10 +1,20 @@
-import React, { StrictMode } from 'react';
-import { createRoot } from 'react-dom/client';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import App from './App';
-import PrivacyPolicy from './pages/PrivacyPolicy';
-import TermsOfUse from './pages/TermsOfUse';
 import './index.css';
+
+import React, { StrictMode } from 'react';
+
+import { createRoot } from 'react-dom/client';
+import {
+  BrowserRouter,
+  Route,
+  Routes,
+} from 'react-router-dom';
+
+import App from './App';
+// Importando do arquivo index.ts central para melhor organização
+import {
+  PrivacyPolicy,
+  TermsOfUse,
+} from './components';
 
 // Registro do Service Worker para melhorar experiência offline e cache
 // Simplificado para evitar problemas de tipagem

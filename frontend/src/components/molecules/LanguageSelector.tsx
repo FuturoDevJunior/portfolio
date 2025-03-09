@@ -1,7 +1,17 @@
 import React from 'react';
+
 import { Globe } from 'lucide-react';
-import { Language } from '../lib/i18n';
-import { useLanguage } from '../hooks/useLanguage';
+
+import { useLanguage } from '../../hooks/useLanguage';
+import { Language } from '../../lib/i18n';
+
+// Helper para garantir que traduções sejam tratadas como string
+const asString = (value: unknown): string => {
+  if (Array.isArray(value)) {
+    return value.join(' ');
+  }
+  return String(value);
+};
 
 interface LanguageSelectorProps {
   currentLanguage: Language;
@@ -27,7 +37,7 @@ export function LanguageSelector({ currentLanguage, onLanguageChange }: Language
         value={currentLanguage}
         onChange={(e) => onLanguageChange(e.target.value as Language)}
         className="bg-transparent text-white border-none outline-none cursor-pointer focus:ring-2 focus:ring-purple-500 focus:ring-opacity-50 rounded-sm"
-        aria-label={t('language.selectLanguage')}
+        aria-label={asString(t('language.selectLanguage'))}
       >
         <option value="pt" className="bg-black">Português</option>
         <option value="en" className="bg-black">English</option>

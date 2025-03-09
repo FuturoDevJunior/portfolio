@@ -1,5 +1,8 @@
+import React from 'react';
+
 import { DivideIcon as LucideIcon } from 'lucide-react';
-import { TechStackBadge } from './TechStackBadge';
+
+import { TechStackBadge } from '../atoms/TechStackBadge';
 
 interface ServiceCardProps {
   icon: typeof LucideIcon;

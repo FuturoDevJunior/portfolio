@@ -1,7 +1,22 @@
 import React, { useState } from 'react';
-import { useLanguage } from '../hooks/useLanguage';
-import { CheckCircle2, Loader2, AlertCircle } from 'lucide-react';
+
+import {
+  AlertCircle,
+  CheckCircle2,
+  Loader2,
+} from 'lucide-react';
+
 import emailjs from '@emailjs/browser';
+
+import { useLanguage } from '../../hooks/useLanguage';
+
+// Helper para garantir que traduções sejam tratadas como string
+const asString = (value: unknown): string => {
+  if (Array.isArray(value)) {
+    return value.join(' ');
+  }
+  return String(value);
+};
 
 export function ContactForm() {
   const { t } = useLanguage();
@@ -22,10 +37,10 @@ export function ContactForm() {
 
   const validate = () => {
     const errors: Record<string, string> = {};
-    if (!formData.name.trim()) errors.name = t('contact.form.errors.nameRequired');
-    if (!formData.email.trim()) errors.email = t('contact.form.errors.emailRequired');
-    else if (!/\S+@\S+\.\S+/.test(formData.email)) errors.email = t('contact.form.errors.emailInvalid');
-    if (!formData.message.trim()) errors.message = t('contact.form.errors.messageRequired');
+    if (!formData.name.trim()) errors.name = asString(t('contact.form.errors.nameRequired'));
+    if (!formData.email.trim()) errors.email = asString(t('contact.form.errors.emailRequired'));
+    else if (!/\S+@\S+\.\S+/.test(formData.email)) errors.email = asString(t('contact.form.errors.emailInvalid'));
+    if (!formData.message.trim()) errors.message = asString(t('contact.form.errors.messageRequired'));
 
     setValidationErrors(errors);
     return Object.keys(errors).length === 0;

@@ -103,6 +103,7 @@ export const translations = {
       phoneAriaLabel: 'Ligar para +55 11 91234-5678',
       location: 'Localização',
       form: {
+        title: 'Formulário de Contato',
         name: 'Nome',
         namePlaceholder: 'Seu nome completo',
         email: 'E-mail',
@@ -111,6 +112,8 @@ export const translations = {
         messagePlaceholder: 'Descreva seu projeto ou necessidade...',
         submit: 'Enviar Mensagem',
         sending: 'Enviando...',
+        retry: 'Tentar Novamente',
+        errorTitle: 'Ops! Algo deu errado',
         errorMessage: 'Ocorreu um erro ao enviar o formulário. Por favor, tente novamente.',
         successTitle: 'Mensagem Enviada!',
         successMessage: 'Obrigado pelo seu contato. Retornarei em breve!',
@@ -274,7 +277,17 @@ export const translations = {
       toggleReadingMode: 'Alternar modo de leitura',
       resetModes: 'Voltar ao modo padrão',
       navigationSections: 'Navegação de Seções',
-      backToTop: 'Voltar ao topo'
+      backToTop: 'Voltar ao topo',
+      acessibilidade: {
+        titulo: 'Acessibilidade',
+        contraste: 'Contraste',
+        contrasteAlto: 'Alto contraste',
+        contrasteNormal: 'Contraste normal',
+        toggleMenu: 'Abrir menu de acessibilidade',
+        ocultar: 'Ocultar controles',
+        atalhoAltA: 'Pressione Alt+A para exibir os controles de acessibilidade',
+        opcoesAcessibilidade: 'Opções de acessibilidade'
+      }
     }
   },
   en: {
@@ -379,6 +392,7 @@ export const translations = {
       phoneAriaLabel: 'Call +55 11 91234-5678',
       location: 'Location',
       form: {
+        title: 'Contact Form',
         name: 'Name',
         namePlaceholder: 'Your full name',
         email: 'Email',
@@ -387,6 +401,8 @@ export const translations = {
         messagePlaceholder: 'Describe your project or needs...',
         submit: 'Send Message',
         sending: 'Sending...',
+        retry: 'Try Again',
+        errorTitle: 'Oops! Something went wrong',
         errorMessage: 'An error occurred while sending the form. Please try again.',
         successTitle: 'Message Sent!',
         successMessage: 'Thank you for your message. I will get back to you soon!',
@@ -544,13 +560,18 @@ export const translations = {
     accessibility: {
       skipToContent: 'Skip to main content',
       highContrastMode: 'High contrast mode',
-      readingMode: 'Reading mode',
       defaultMode: 'Default mode',
       toggleHighContrast: 'Toggle high contrast mode',
-      toggleReadingMode: 'Toggle reading mode',
-      resetModes: 'Reset to default mode',
-      navigationSections: 'Section Navigation',
-      backToTop: 'Back to top'
+      acessibilidade: {
+        titulo: 'Accessibility',
+        contraste: 'Contrast',
+        contrasteAlto: 'High contrast',
+        contrasteNormal: 'Normal contrast',
+        toggleMenu: 'Open accessibility menu',
+        ocultar: 'Hide controls',
+        atalhoAltA: 'Press Alt+A to display accessibility controls',
+        opcoesAcessibilidade: 'Accessibility options'
+      }
     }
   },
   es: {
@@ -655,6 +676,7 @@ export const translations = {
       phoneAriaLabel: 'Llamar a +55 11 91234-5678',
       location: 'Ubicación',
       form: {
+        title: 'Formulario de Contacto',
         name: 'Nombre',
         namePlaceholder: 'Su nombre completo',
         email: 'Correo',
@@ -663,6 +685,8 @@ export const translations = {
         messagePlaceholder: 'Describa su proyecto o necesidad...',
         submit: 'Enviar Mensaje',
         sending: 'Enviando...',
+        retry: 'Intentar de Nuevo',
+        errorTitle: '¡Ups! Algo salió mal',
         errorMessage: 'Ocurrió un error al enviar el formulario. Por favor, inténtelo de nuevo.',
         successTitle: '¡Mensaje Enviado!',
         successMessage: 'Gracias por su mensaje. Me pondré en contacto con usted pronto.',
@@ -826,7 +850,17 @@ export const translations = {
       toggleReadingMode: 'Alternar modo de lectura',
       resetModes: 'Volver al modo predeterminado',
       navigationSections: 'Navegación de Secciones',
-      backToTop: 'Volver arriba'
+      backToTop: 'Volver arriba',
+      acessibilidade: {
+        titulo: 'Accesibilidad',
+        contraste: 'Contraste',
+        contrasteAlto: 'Alto contraste',
+        contrasteNormal: 'Contraste normal',
+        toggleMenu: 'Abrir menú de accesibilidad',
+        ocultar: 'Ocultar controles',
+        atalhoAltA: 'Presione Alt+A para mostrar los controles de accesibilidad',
+        opcoesAcessibilidade: 'Opciones de accesibilidad'
+      }
     }
   }
 } as const;

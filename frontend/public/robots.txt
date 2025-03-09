@@ -1,16 +1,21 @@
+# www.robotstxt.org/
+
+# Permitir acesso a todos os bots de busca
 User-agent: *
 Allow: /
 
-# Prevent access to admin or private areas
-Disallow: /admin/
-Disallow: /private/
+# Desativar indexação de páginas específicas
 Disallow: /api/
-Disallow: /*?utm_
-Disallow: /*?source=
-Disallow: /*.json$
+Disallow: /admin/
+Disallow: /login
+Disallow: /logout
+Disallow: /register
 
-# Sitemap location
+# Sitemap
 Sitemap: https://www.devferreirag.com/sitemap.xml
+
+# Tempo de espera entre requisições
+Crawl-delay: 10
 
 # Host canônico
 Host: https://www.devferreirag.com

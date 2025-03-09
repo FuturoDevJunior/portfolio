@@ -3,7 +3,65 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+
+    <!-- PWA Support -->
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#7e22ce" />
+    <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta name="apple-mobile-web-app-title" content="DevFerreiraG" />
+
+    <!-- SEO Meta Tags -->
+    <meta
+      name="description"
+      content="DevFerreiraG - Consultoria especializada em desenvolvimento de software, engenharia de dados e arquitetura de sistemas. Transforme sua empresa com soluções tecnológicas de ponta."
+    />
+    <meta
+      name="keywords"
+      content="desenvolvimento web, engenharia de dados, consultoria tecnológica, arquitetura de sistemas, cloud computing, DevOps"
+    />
+    <meta name="author" content="DevFerreiraG" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.devferreirag.com/" />
+    <meta
+      property="og:title"
+      content="DevFerreiraG - Consultoria em Tecnologia"
+    />
+    <meta
+      property="og:description"
+      content="Consultoria especializada em desenvolvimento de software, engenharia de dados e arquitetura de sistemas."
+    />
+    <meta
+      property="og:image"
+      content="https://www.devferreirag.com/screenshots/home.png"
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://www.devferreirag.com/" />
+    <meta
+      property="twitter:title"
+      content="DevFerreiraG - Consultoria em Tecnologia"
+    />
+    <meta
+      property="twitter:description"
+      content="Consultoria especializada em desenvolvimento de software, engenharia de dados e arquitetura de sistemas."
+    />
+    <meta
+      property="twitter:image"
+      content="https://www.devferreirag.com/screenshots/home.png"
+    />
 
     <!-- Verificação de Webmasters -->
     <meta
@@ -12,12 +70,12 @@
     />
     <meta name="msvalidate.01" content="d8971cb9619741389d77dbbc8131d219" />
 
-    <meta
-      name="description"
-      content="DevFerreiraG - Serviços de consultoria em desenvolvimento web e transformação digital"
-    />
-    <meta name="theme-color" content="#3B82F6" />
-    <title>DevFerreiraG - Desenvolvimento Web Profissional</title>
+    <!-- Preconnect para melhorar performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <title>DevFerreiraG - Consultoria em Tecnologia</title>
+
     <!-- Google Tag Manager -->
     <script>
       if (location.hostname !== "localhost") {
@@ -35,7 +93,7 @@
     </script>
     <!-- End Google Tag Manager -->
   </head>
-  <body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100">
+  <body class="bg-black text-white">
     <!-- Google Tag Manager (noscript) -->
     <noscript>
       <iframe
@@ -46,6 +104,22 @@
       ></iframe>
     </noscript>
     <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Mensagem para usuários sem JavaScript -->
+    <noscript>
+      <div
+        style="
+          padding: 20px;
+          text-align: center;
+          background-color: #f8d7da;
+          color: #721c24;
+          margin: 20px;
+        "
+      >
+        Para uma melhor experiência, por favor habilite o JavaScript no seu
+        navegador.
+      </div>
+    </noscript>
 
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>

@@ -1,12 +1,17 @@
-# Dependências
-node_modules
-.pnp
-.pnp.js
-/.pnpm-store/
-yarn.lock
+# Node.js e gerenciadores de pacotes
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnpm-store/
+.npm/
 package-lock.json
+yarn.lock
 pnpm-lock.yaml
 !pnpm-lock.yaml
+/.pnp
+.pnp.js
 
 # Arquivos de build e saída
 /dist/
@@ -15,64 +20,59 @@ pnpm-lock.yaml
 /.next/
 /.nuxt/
 /output/
-/tmp/
 frontend/dist/
 backend/dist/
+storybook-static/
+*.tsbuildinfo
+tsconfig.tsbuildinfo
 
-# Testes
-/coverage/
-/.nyc_output/
-/cypress/videos/
-/cypress/screenshots/
-/__tests__/__snapshots__/
-
-# Logs
-/logs/
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
-health-check.log
-
-# Variáveis de ambiente
+# Variáveis de ambiente e configurações locais
 .env
 .env.local
-.env.development
 .env.development.local
-.env.test
 .env.test.local
-.env.production
 .env.production.local
 .env*.local
 **/.env
 **/.env.*
 !**/.env.example
 
-# Cache e arquivos temporários
-.npm/
+# Caches e arquivos temporários
+.cache/
+.vite/
+.swc/
+.turbo/
 .eslintcache
 .stylelintcache
-.vite/
-.turbo/
-.cache/
-.swc/
-.temp/
 .rollup.cache/
-storybook-static/
 .vercel/
 .netlify/
 .webpack/
-tsconfig.tsbuildinfo
-*.tsbuildinfo
+.temp/
+tmp/
 
-# Arquivos de IDE e editor
+# Testes e cobertura
+/coverage/
+/.nyc_output/
+/cypress/videos/
+/cypress/screenshots/
+/integration-test-report/
+/playwright-report/
+/test-results/
+*.lcov
+
+# Logs
+/logs/
+*.log
+health-check.log
+
+# Configurações de editores e IDEs
 .idea/
 .vscode/*
 !.vscode/extensions.json
 !.vscode/settings.json
 !.vscode/launch.json
+!.vscode/tasks.json
 *.suo
 *.ntvs*
 *.njsproj
@@ -101,34 +101,51 @@ $RECYCLE.BIN/
 *.swo
 .directory
 
+# PWA
+**/public/workbox-*.js
+**/public/sw.js
+**/public/fallback-*.js
+**/public/worker-*.js
+**/public/precache-*.js
+
 # Arquivos gerados automaticamente
 /generated/
 /auto-imports.d.ts
 /components.d.ts
 /locales/_build/
 /stats.html
-
-# PWA
-**/public/workbox-*.js
-**/public/sw.js
-**/public/fallback-*.js
-**/public/worker-*.js
+/sitemap*.xml
+/robots*.txt
 
 # Ferramentas específicas
 .firebase/
 .firebaserc
 firebase-debug.log
-/sitemap*.xml
-/robots.txt
 .serverless/
 .docusaurus/
+.contentlayer/
 
-# Mobile
-.gradle/
-/android/build/
-/ios/build/
-/ios/Pods/
-/android/local.properties
-/ios/Podfile.lock
-*.keystore
-!debug.keystore
+# Arquivos de análise e monitoramento
+*.heapsnapshot
+*.cpuprofile
+/profiling-results/
+/benchmarks/results/
+
+# Arquivos específicos do projeto
+/TODO.md
+/NOTES.md
+/CREDENTIALS.md
+
+# Build otimização e CDN
+/cdn-assets/
+/.lighthouseci/
+/bundle-stats/
+/size-plugin.json
+
+# Backups e restaurações
+*.backup
+*.bak
+*.orig
+*.old
+*.tmp
+*.temp

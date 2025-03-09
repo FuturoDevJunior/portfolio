@@ -1,6 +1,9 @@
+import React from 'react';
+
 import { DivideIcon as LucideIcon } from 'lucide-react';
-import { TechStackBadge } from './TechStackBadge';
-import { useLanguage } from '../hooks/useLanguage';
+
+import { useLanguage } from '../../hooks/useLanguage';
+import { TechStackBadge } from '../atoms/TechStackBadge';
 
 interface ExpertiseCardProps {
   icon: typeof LucideIcon;
@@ -8,6 +11,14 @@ interface ExpertiseCardProps {
   description: string;
   technologies: string[];
 }
+
+// Helper para garantir que traduções sejam tratadas como string
+const asString = (value: unknown): string => {
+  if (Array.isArray(value)) {
+    return value.join(' ');
+  }
+  return String(value);
+};
 
 export function ExpertiseCard({
   icon: Icon,
@@ -28,7 +39,7 @@ export function ExpertiseCard({
       <div
         className="flex flex-wrap gap-2"
         role="list"
-        aria-label={t('expertise.technologies')}
+        aria-label={asString(t('expertise.technologies'))}
       >
         {technologies.map((tech) => (
           <TechStackBadge key={tech} name={tech} ecosystem={title} />
